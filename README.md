@@ -4,7 +4,7 @@ A modern, interactive 3D portfolio website showcasing my skills as a Full Stack 
 
 ## 🌐 Live Demo
 
-**Deployed Site:** [https://inspiring-cannoli-542e1b.netlify.app](https://inspiring-cannoli-542e1b.netlify.app)
+**Deployed Site:** (https://hari-portfolio-pi.vercel.app/)
 
 ## 📋 Table of Contents
 
