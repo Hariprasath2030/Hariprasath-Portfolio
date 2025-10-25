@@ -51,8 +51,7 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-[140vh] mx-auto overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-black">
       </div>
       <FloatingElements />
       <div
@@ -131,7 +130,6 @@ const Hero = () => {
                   </p>
                 </motion.div>
 
-                {/* CTA Buttons */}
                 <motion.div
                   className="flex flex-col sm:flex-row gap-4 mt-8"
                   initial={{ opacity: 0, y: 30 }}
@@ -238,7 +236,6 @@ const Hero = () => {
                   </p>
                   <p className="text-[#00ff88] text-xs">3D Design Specialist</p>
 
-                  {/* Floating particles around card */}
                   {[...Array(6)].map((_, i) => (
                     <motion.div
                       key={i}

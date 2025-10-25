@@ -78,7 +78,7 @@ const CertificationCard = ({ certification, index }) => {
   const handleDownloadCertificate = (e) => {
     e.stopPropagation();
     // Open PDF in new tab instead of downloading
-    window.open(`/certificates/${certification.certificateFile}`, '_blank');
+    window.open(`/certificates/${certification.certificateFile}`, "_blank");
   };
 
   return (
@@ -98,7 +98,6 @@ const CertificationCard = ({ certification, index }) => {
           transformStyle: "preserve-3d",
         }}
       >
-        {/* Animated Background Gradient */}
         <motion.div
           className={`absolute inset-0 bg-gradient-to-br ${certification.color} opacity-10 rounded-3xl`}
           animate={{
@@ -108,7 +107,6 @@ const CertificationCard = ({ certification, index }) => {
           transition={{ duration: 0.3 }}
         />
 
-        {/* Header */}
         <div className="relative z-10 mb-4">
           <div className="flex items-center justify-between mb-4">
             <motion.div
@@ -154,12 +152,10 @@ const CertificationCard = ({ certification, index }) => {
           </div>
         </div>
 
-        {/* Description */}
         <p className="text-gray-300 text-sm leading-relaxed mb-4 relative z-10">
           {certification.description}
         </p>
 
-        {/* Skills Tags */}
         <div className="flex flex-wrap gap-2 mb-4 relative z-10">
           {certification.skills.map((skill, skillIndex) => (
             <motion.span
@@ -181,7 +177,6 @@ const CertificationCard = ({ certification, index }) => {
           ))}
         </div>
 
-        {/* Floating Elements */}
         {isHovered && (
           <>
             {[...Array(3)].map((_, i) => (
@@ -216,9 +211,6 @@ const CertificationCard = ({ certification, index }) => {
 const Certifications = () => {
   return (
     <section id="certifications" className="relative">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#ff6b35]/5 to-transparent"></div>
-
       <div className="relative z-10">
         <motion.div variants={textVariant()}>
           <p className={`${styles.sectionSubText} text-center`}>
@@ -261,8 +253,8 @@ const Certifications = () => {
               repeat: Infinity,
             }}
           >
-            📜 Click the view button to open certificate • Hover for
-            interactive experience
+            📜 Click the view button to open certificate • Hover for interactive
+            experience
           </motion.p>
         </motion.div>
 

@@ -18,7 +18,7 @@ const ProjectCard = ({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <motion.div 
+    <motion.div
       variants={fadeIn("up", "spring", index * 0.2, 0.75)}
       className="relative group"
       onMouseEnter={() => setIsHovered(true)}
@@ -26,13 +26,13 @@ const ProjectCard = ({
     >
       <motion.div
         className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl w-full sm:w-[360px] border border-gray-700 hover:border-[#00ff88] transition-all duration-500 cursor-pointer overflow-hidden"
-        whileHover={{ 
+        whileHover={{
           y: -10,
-          boxShadow: "0 25px 50px rgba(0, 255, 136, 0.2)"
+          boxShadow: "0 25px 50px rgba(0, 255, 136, 0.2)",
         }}
         onClick={() => window.open(live_demo_link, "_blank")}
         style={{
-          transformStyle: "preserve-3d"
+          transformStyle: "preserve-3d",
         }}
       >
         {/* Animated Background Gradient */}
@@ -40,7 +40,7 @@ const ProjectCard = ({
           className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10 rounded-3xl"
           animate={{
             opacity: isHovered ? 1 : 0,
-            scale: isHovered ? 1.02 : 1
+            scale: isHovered ? 1.02 : 1,
           }}
           transition={{ duration: 0.3 }}
         />
@@ -52,11 +52,11 @@ const ProjectCard = ({
             alt={name}
             className="w-full h-full object-cover"
             animate={{
-              scale: isHovered ? 1.1 : 1
+              scale: isHovered ? 1.1 : 1,
             }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           />
-          
+
           {/* Overlay on hover */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end justify-between p-4"
@@ -81,7 +81,7 @@ const ProjectCard = ({
               >
                 Live Demo
               </motion.button>
-              
+
               <motion.button
                 onClick={(e) => {
                   e.stopPropagation();
@@ -99,16 +99,16 @@ const ProjectCard = ({
 
         {/* Project Info */}
         <div className="relative z-10">
-          <motion.h3 
+          <motion.h3
             className="text-white font-bold text-[24px] mb-3"
             animate={{
-              color: isHovered ? "#00ff88" : "#ffffff"
+              color: isHovered ? "#00ff88" : "#ffffff",
             }}
             transition={{ duration: 0.3 }}
           >
             {name}
           </motion.h3>
-          
+
           <p className="text-gray-300 text-[14px] leading-relaxed mb-4">
             {description}
           </p>
@@ -120,15 +120,15 @@ const ProjectCard = ({
                 key={`${name}-${tag.name}`}
                 className={`text-[12px] px-3 py-1 rounded-full border ${tag.color} font-medium`}
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ 
-                  opacity: 1, 
+                animate={{
+                  opacity: 1,
                   scale: 1,
-                  borderColor: isHovered ? "#00ff88" : "currentColor"
+                  borderColor: isHovered ? "#00ff88" : "currentColor",
                 }}
-                transition={{ 
-                  duration: 0.3, 
+                transition={{
+                  duration: 0.3,
                   delay: tagIndex * 0.1,
-                  borderColor: { duration: 0.3 }
+                  borderColor: { duration: 0.3 },
                 }}
                 whileHover={{ scale: 1.05 }}
               >
@@ -159,7 +159,7 @@ const ProjectCard = ({
                   duration: 1.5,
                   delay: i * 0.2,
                   repeat: Infinity,
-                  repeatDelay: 2
+                  repeatDelay: 2,
                 }}
               />
             ))}
@@ -173,9 +173,6 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <section id="projects" className="relative">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#ff6b35]/5 to-transparent"></div>
-      
       <div className="relative z-10">
         <motion.div variants={textVariant()}>
           <p className={`${styles.sectionSubText} text-center`}>My Portfolio</p>
@@ -192,14 +189,13 @@ const Works = () => {
         >
           <p className="mt-4 text-gray-300 text-[17px] max-w-3xl leading-[30px] text-center">
             Following projects showcase my skills and experience through
-            real-world examples of my work. Each project is briefly described with
-            links to code repositories and live demos. They reflect my
+            real-world examples of my work. Each project is briefly described
+            with links to code repositories and live demos. They reflect my
             ability to solve complex problems, work with different technologies,
             and manage projects effectively.
           </p>
         </motion.div>
 
-        {/* Interactive Instruction */}
         <motion.div
           className="w-full flex justify-center mt-6"
           variants={fadeIn("", "", 0.2, 1)}
@@ -210,14 +206,15 @@ const Works = () => {
               boxShadow: [
                 "0 0 0 0 rgba(0, 255, 136, 0.4)",
                 "0 0 0 10px rgba(0, 255, 136, 0)",
-              ]
+              ],
             }}
             transition={{
               duration: 2,
               repeat: Infinity,
             }}
           >
-            ✨ Hover over cards for interactive experience • Click to view live demo
+            ✨ Hover over cards for interactive experience • Click to view live
+            demo
           </motion.p>
         </motion.div>
 

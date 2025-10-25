@@ -5,10 +5,15 @@ import { navLinks } from "../constants/index.js";
 import { styles } from "../styles";
 import { hari, menu, close } from "../assets";
 
+import { Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes"; // ⚡ for theme toggling
+import { Button } from "./ui/button.jsx";
+
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,26 +43,14 @@ const Navbar = () => {
   };
 
   const mobileMenuVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-      y: -20,
-    },
+    hidden: { opacity: 0, scale: 0.8, y: -20 },
     visible: {
       opacity: 1,
       scale: 1,
       y: 0,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.3, ease: "easeOut" },
     },
-    exit: {
-      opacity: 0,
-      scale: 0.8,
-      y: -20,
-      transition: { duration: 0.2 },
-    },
+    exit: { opacity: 0, scale: 0.8, y: -20, transition: { duration: 0.2 } },
   };
 
   return (
@@ -74,7 +67,7 @@ const Navbar = () => {
       }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        {/* Logo Section */}
+        {/* ---------- Logo ---------- */}
         <Link
           to="/"
           className="flex items-center gap-3"
@@ -99,11 +92,7 @@ const Navbar = () => {
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 1, 0.5],
               }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             />
           </motion.div>
 
@@ -119,7 +108,7 @@ const Navbar = () => {
           </motion.div>
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* ---------- Desktop Links ---------- */}
         <ul className="list-none hidden sm:flex flex-row gap-8">
           {navLinks.map((nav) => (
             <motion.li
@@ -128,7 +117,7 @@ const Navbar = () => {
               whileHover="hover"
               className={`${
                 active === nav.title ? "text-[#00ff88]" : "text-gray-300"
-              } hover: text-[#ff6b35] text-[18px] font-medium cursor-pointer transition-colors duration-200 relative`}
+              } hover:text-[#ff6b35] text-[18px] font-medium cursor-pointer transition-colors duration-200 relative`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`} className="relative">
@@ -147,8 +136,35 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="sm:flex flex-row items-center gap-3 hidden">
+          <Button
+            onClick={() =>
+              setTheme(resolvedTheme === "light" ? "dark" : "light")
+            }
+            className="p-2 rounded-full bg-white dark:bg-black hover:bg-gray-200 dark:hover:bg-gray-800 shadow-md transition-colors"
+          >
+            {resolvedTheme === "light" ? (
+              <Moon className="w-4 h-4 text-black" />
+            ) : (
+              <Sun className="w-4 h-4 text-yellow-400" />
+            )}
+          </Button>
+        </div>
+
+        <div className="sm:hidden flex flex-1 justify-end items-center gap-2">
+          <Button
+            onClick={() =>
+              setTheme(resolvedTheme === "light" ? "dark" : "light")
+            }
+            className="p-2 rounded-full bg-white dark:bg-black hover:bg-gray-200 dark:hover:bg-gray-800 shadow-md"
+          >
+            {resolvedTheme === "light" ? (
+              <Moon className="w-4 h-4 text-black" />
+            ) : (
+              <Sun className="w-4 h-4 text-yellow-400" />
+            )}
+          </Button>
+
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -162,7 +178,7 @@ const Navbar = () => {
             />
           </motion.button>
 
-          {/* Mobile Menu */}
+          {/* ---------- Mobile Menu ---------- */}
           <AnimatePresence>
             {toggle && (
               <motion.div

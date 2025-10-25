@@ -65,7 +65,6 @@ const Contact = () => {
 
   return (
     <>
-      {/* Section Heading */}
       <div className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -81,11 +80,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      {/* Main Contact Section */}
       <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00ff88]/5 to-transparent" />
-
-        {/* Form Container */}
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
           className="flex-[0.85] bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl border border-gray-700 relative z-10"
@@ -104,7 +99,6 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="mt-12 flex flex-col gap-8"
             >
-              {/* Name Field */}
               <motion.label
                 className="flex flex-col"
                 variants={fadeIn("right", "spring", 0.1, 0.6)}
@@ -128,7 +122,6 @@ const Contact = () => {
                 />
               </motion.label>
 
-              {/* Email Field */}
               <motion.label
                 className="flex flex-col"
                 variants={fadeIn("right", "spring", 0.2, 0.6)}
@@ -152,7 +145,6 @@ const Contact = () => {
                 />
               </motion.label>
 
-              {/* Message Field */}
               <motion.label
                 className="flex flex-col"
                 variants={fadeIn("right", "spring", 0.3, 0.6)}
@@ -176,7 +168,6 @@ const Contact = () => {
                 />
               </motion.label>
 
-              {/* Submit Button */}
               <motion.button
                 type="submit"
                 disabled={loading}
@@ -214,12 +205,10 @@ const Contact = () => {
           </div>
         </motion.div>
 
-        {/* 3D Earth Canvas */}
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
           className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] relative"
         >
-          <div className="absolute inset-0 bg-gradient-to-l from-[#00ff88]/10 to-transparent rounded-3xl"></div>
           <EarthCanvas />
         </motion.div>
       </div>
