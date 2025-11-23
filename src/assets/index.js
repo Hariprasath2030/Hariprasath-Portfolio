@@ -30,6 +30,7 @@ import smartretail from "./smart-retail.png";
 import budgetbloom from "./budgetbloom.png"
 import festbook from "./fest-book.png"
 import healthcare from "./healthcare.png"
+import medivox from "./medivox.png"
 export {
   hari,
   port,
@@ -62,5 +63,6 @@ export {
   budgetbloom,
   festbook,
   healthcare,
-  sekel
+  sekel,
+  medivox
 };

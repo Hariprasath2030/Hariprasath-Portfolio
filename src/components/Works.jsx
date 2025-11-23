@@ -25,7 +25,7 @@ const ProjectCard = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
-        className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl w-full sm:w-[360px] border border-gray-700 hover:border-[#00ff88] transition-all duration-500 cursor-pointer overflow-hidden"
+        className="bg-gradient-to-br from-gray-950 to-gray-950 p-6 rounded-3xl w-full sm:w-[360px] border border-gray-700 hover:border-[#00ff88] transition-all duration-500 cursor-pointer overflow-hidden"
         whileHover={{
           y: -10,
           boxShadow: "0 25px 50px rgba(0, 255, 136, 0.2)",

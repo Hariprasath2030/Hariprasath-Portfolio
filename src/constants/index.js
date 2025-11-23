@@ -23,7 +23,8 @@ import {
   budgetbloom,
   festbook,
   healthcare,
-  sekel
+  sekel,
+  medivox,
 } from "../assets";
 
 export const navLinks = [
@@ -335,7 +336,37 @@ const projects = [
     "image": healthcare,
     "source_code_link": "https://github.com/Hariprasath2030/Heal_Smart_System",
     "live_demo_link": "https://heal-smart-system.vercel.app/"
-  }
+  },
+  {
+  "name": "Medi-Vox – AI Medical Voice Assistant",
+  "description": "Medi-Vox is a real-time AI medical voice agent built with Next.js, React, and TypeScript. It enables users to speak naturally about health symptoms and receive instant, intelligent, and context-aware medical guidance. Powered by AssemblyAI for STT/TTS, secured with Clerk authentication, and backed by Neon PostgreSQL with encrypted medical records.",
+  "tags": [
+    {
+      "name": "Nextjs",
+      "color": "blue-text-gradient"
+    },
+    {
+      "name": "Reactjs",
+      "color": "green-text-gradient"
+    },
+    {
+      "name": "Typescript",
+      "color": "pink-text-gradient"
+    },
+    {
+      "name": "AssemblyAI",
+      "color": "orange-text-gradient"
+    },
+    {
+      "name": "ClerkAuth",
+      "color": "white-text-gradient"
+    }
+  ],
+  "image": medivox, 
+  "source_code_link": "https://github.com/Hariprasath2030/Medi-Vox",
+  "live_demo_link": "https://medi-vox.vercel.app/"
+}
+
 ];
 
 export { services, technologies, experiences, projects };
