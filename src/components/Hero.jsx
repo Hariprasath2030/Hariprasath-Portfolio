@@ -1,58 +1,13 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { FloatingElements } from "./canvas";
-import { FloatingDock } from "./ui/floating-dock";
-import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandInstagram,
-  IconBrandTwitter,
-  IconCode,
-} from "@tabler/icons-react";
 
 const Hero = () => {
-  const dockLinks = [
-    {
-      title: "LinkedIn",
-      icon: (
-        <IconBrandLinkedin className="h-full w-full text-[#0077b5] hover:text-[#00ff88] transition-all duration-500 hover:scale-110" />
-      ),
-      href: "https://www.linkedin.com/in/hariprasath-v-ab5006276",
-    },
-    {
-      title: "GitHub",
-      icon: (
-        <IconBrandGithub className="h-full w-full text-white hover:text-[#00ff88] transition-all duration-500 hover:scale-110 hover:rotate-12" />
-      ),
-      href: "https://github.com/Hariprasath2030",
-    },
-    {
-      title: "Instagram",
-      icon: (
-        <IconBrandInstagram className="h-full w-full text-[#e4405f] hover:text-[#ff6b35] transition-all duration-500 hover:scale-110 hover:rotate-[-12deg]" />
-      ),
-      href: "https://www.instagram.com/hearty_soul_016?igsh=MTNoNWFjdXp0MzN6Ng==",
-    },
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandTwitter className="h-full w-full text-[#1da1f2] hover:text-[#00ff88] transition-all duration-500 hover:scale-110 hover:rotate-6" />
-      ),
-      href: "https://x.com/Hariprasat67463?t=pBW9m_AzJkdc5RXmVmPbiw&s=09",
-    },
-    {
-      title: "LeetCode",
-      icon: (
-        <IconCode className="h-full w-full text-[#ffa116] hover:text-[#ff6b35] transition-all duration-500 hover:scale-110 hover:rotate-[-6deg]" />
-      ),
-      href: "https://leetcode.com/u/hariprasath2030/",
-    },
-  ];
+
 
   return (
-    <section className="relative w-full h-[140vh] mx-auto overflow-hidden">
-      <div className="absolute inset-0 bg-black">
-      </div>
+    <section className="relative w-full h-[100vh] mx-auto overflow-hidden">
+      <div className="absolute inset-0 bg-black"></div>
       <FloatingElements />
       <div
         className={`absolute inset-0 top-[50px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col justify-center z-10`}
@@ -90,7 +45,9 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.2 }}
                 >
-                  <h1 className={`${styles.heroHeadText} text-white mb-4`}>
+                  <h1
+                    className={`${styles.heroHeadText} text-[38px] sm:text-[48px] text-white mb-4`}
+                  >
                     Hi, I'm{" "}
                     <motion.span
                       className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent"
@@ -114,7 +71,7 @@ const Hero = () => {
                   transition={{ duration: 1, delay: 0.5 }}
                 >
                   <p
-                    className={`${styles.heroSubText} mt-2 text-white-100 max-w-3xl`}
+                    className={`${styles.heroSubText} text-[15px] sm:text-[18px] mt-2 text-white-100 max-w-3xl leading-relaxed`}
                   >
                     Full Stack Developer specializing in{" "}
                     <motion.span
@@ -166,18 +123,7 @@ const Hero = () => {
                   </motion.button>
                 </motion.div>
 
-                <motion.div
-                  className="flex justify-center sm:justify-start mt-12"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 1.1 }}
-                >
-                  <FloatingDock
-                    mobileClassName="translate-y-10 -translate-x-5"
-                    desktopClassName="bg-gray-900/30 backdrop-blur-md border border-[#00ff88]/20 hover:border-[#00ff88]/40 transition-all duration-300"
-                    items={dockLinks}
-                  />
-                </motion.div>
+           
               </div>
             </div>
           </div>
@@ -199,7 +145,7 @@ const Hero = () => {
               }}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl border border-gray-700"
+                className="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-900 rounded-3xl shadow-2xl border border-gray-700"
                 style={{
                   transformStyle: "preserve-3d",
                   transform: "rotateX(15deg) rotateY(15deg)",
@@ -209,9 +155,9 @@ const Hero = () => {
                 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-4 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10 rounded-2xl p-6 flex flex-col justify-center items-center text-center">
+                <div className="absolute inset-4 bg-gradient-to-br from-black to-[#ff6b35]/10 rounded-2xl p-6 flex flex-col justify-center items-center text-center">
                   <motion.div
-                    className="w-20 h-20 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] rounded-full mb-4 flex items-center justify-center"
+                    className="w-20 h-20 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] rounded-full mb-4 flex items-center justify-center overflow-hidden"
                     animate={{
                       rotate: [0, 360],
                       scale: [1, 1.1, 1],
@@ -225,7 +171,11 @@ const Hero = () => {
                       },
                     }}
                   >
-                    <span className="text-2xl font-bold text-white">H</span>
+                    <img
+                      src="/src/assets/port.jpg"
+                      alt="Logo"
+                      className="w-24 h-24 object-cover"
+                    />
                   </motion.div>
 
                   <h3 className="text-xl font-bold text-white mb-2">
@@ -234,7 +184,7 @@ const Hero = () => {
                   <p className="text-gray-300 text-sm mb-1">
                     Working @Sekel Tech
                   </p>
-                  <p className="text-[#00ff88] text-xs">3D Design Specialist</p>
+                  <p className="text-[#00ff88] text-xs">Full stack Developer</p>
 
                   {[...Array(6)].map((_, i) => (
                     <motion.div

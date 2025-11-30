@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaHeart } from "react-icons/fa";
 import { fadeIn } from "../utils/motion";
+import { FloatingDock } from "./ui/floating-dock";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandInstagram,
+  IconBrandTwitter,
+  IconCode,
+} from "@tabler/icons-react";
 
 const Footer = () => {
   const services = [
@@ -18,6 +26,44 @@ const Footer = () => {
       title: "UI/UX Design",
       description: "Modern and responsive designs",
       icon: "🎨",
+    },
+  ];
+
+  const dockLinks = [
+    {
+      title: "LinkedIn",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-[#0077b5] hover:text-[#00ff88] transition-all duration-500 hover:scale-110" />
+      ),
+      href: "https://www.linkedin.com/in/hariprasath-v-ab5006276",
+    },
+    {
+      title: "GitHub",
+      icon: (
+        <IconBrandGithub className="h-full w-full text-white hover:text-[#00ff88] transition-all duration-500 hover:scale-110 hover:rotate-12" />
+      ),
+      href: "https://github.com/Hariprasath2030",
+    },
+    {
+      title: "Instagram",
+      icon: (
+        <IconBrandInstagram className="h-full w-full text-[#e4405f] hover:text-[#ff6b35] transition-all duration-500 hover:scale-110 hover:rotate-[-12deg]" />
+      ),
+      href: "https://www.instagram.com/hearty_soul_016?igsh=MTNoNWFjdXp0MzN6Ng==",
+    },
+    {
+      title: "Twitter",
+      icon: (
+        <IconBrandTwitter className="h-full w-full text-[#1da1f2] hover:text-[#00ff88] transition-all duration-500 hover:scale-110 hover:rotate-6" />
+      ),
+      href: "https://x.com/Hariprasat67463?t=pBW9m_AzJkdc5RXmVmPbiw&s=09",
+    },
+    {
+      title: "LeetCode",
+      icon: (
+        <IconCode className="h-full w-full text-[#ffa116] hover:text-[#ff6b35] transition-all duration-500 hover:scale-110 hover:rotate-[-6deg]" />
+      ),
+      href: "https://leetcode.com/u/hariprasath2030/",
     },
   ];
 
@@ -175,9 +221,26 @@ const Footer = () => {
               ))}
             </div>
           </motion.div>
+          <div className="lg:col-span-4 flex flex-col items-start">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent mb-6">
+              Connect on Social Media...🌐
+            </h2>
+
+            <motion.div
+              className="flex justify-start"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.1 }}
+            >
+              <FloatingDock
+                mobileClassName="translate-y-10 -translate-x-5"
+                desktopClassName="bg-gray-900/30 backdrop-blur-md border border-[#00ff88]/20 hover:border-[#00ff88]/40 transition-all duration-300"
+                items={dockLinks}
+              />
+            </motion.div>
+          </div>
         </div>
 
-        {/* Divider */}
         <motion.div
           className="w-full h-px bg-gradient-to-r from-transparent via-[#00ff88] to-transparent mb-8"
           initial={{ scaleX: 0 }}

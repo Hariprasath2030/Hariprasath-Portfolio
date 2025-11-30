@@ -157,6 +157,99 @@ const experiences = [
 ];
 
 const projects = [
+    {
+  "name": "Medi-Vox – AI Medical Voice Assistant",
+  "description": "Medi-Vox is a real-time AI medical voice agent, it enables users to speak naturally about health symptoms and receive instant, intelligent, and context-aware medical guidance. Powered by AssemblyAI for STT/TTS, secured with Clerk authentication, and backed by Neon PostgreSQL with encrypted medical records.",
+  "tags": [
+    {
+      "name": "Nextjs",
+      "color": "blue-text-gradient"
+    },
+    {
+      "name": "Reactjs",
+      "color": "green-text-gradient"
+    },
+    {
+      "name": "Typescript",
+      "color": "pink-text-gradient"
+    },
+    {
+      "name": "AssemblyAI",
+      "color": "orange-text-gradient"
+    },
+    {
+      "name": "ClerkAuth",
+      "color": "white-text-gradient"
+    }
+  ],
+  "image": medivox, 
+  "source_code_link": "https://github.com/Hariprasath2030/Medi-Vox",
+  "live_demo_link": "https://medi-vox.vercel.app/"
+},
+  {
+    name: "Smart Retail Hub",
+    description:
+      "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement, ensuring seamless product tracking, predictive analytics, enhanced decision-making, supply chain visibility, cost efficiency, digital transformation.",
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Nodejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Expressjs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Mongodb",
+        color: "White-text-gradient",
+      },
+    ],
+    "image": smartretail,
+    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client",
+    "live_demo_link": "https://retail-hub-client.vercel.app/"
+  },
+   {
+    name: "Budget Bloom",
+    description:
+    "Budget-Bloom is a full-stack app that helps users manage finances by tracking income, expenses, and analyzing spending with visual charts. It offers authentication, filters, and detailed financial insights, empowering smart budgeting, financial planning, expense categorization, savings optimization, monthly reports, goal tracking, cash-flow analysis, secure data storage, and personalized recommendations.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Drizzle Orm",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Expressjs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Neon",
+        color: "White-text-gradient",
+      },
+      {
+        name: "Clerk",
+        color: "blue-text-gradient",
+      },
+    ],
+    "image": budgetbloom,
+    "source_code_link": "https://github.com/Hariprasath2030/Budget-Bloom",
+    "live_demo_link": "https://budget-bloom.vercel.app/"
+  },
   {
     name: "Restaurant management system",
     description:
@@ -208,71 +301,7 @@ const projects = [
     ],
     image: jobit,
     source_code_link: "https://github.com/Hariprasath2030/Student-performance-system",
-  },
-  {
-    name: "Smart Retail Hub",
-    description:
-      "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement.",
-    tags: [
-      {
-        name: "Reactjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Tailwindcss",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Nodejs",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Expressjs",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Mongodb",
-        color: "White-text-gradient",
-      },
-    ],
-    "image": smartretail,
-    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client",
-    "live_demo_link": "https://retail-hub-client.vercel.app/"
-  },
-  {
-    name: "Budget Bloom",
-    description:
-      "Budget-Bloom is a full-stack app that helps users manage finances by tracking income, expenses, and analyzing spending with visual charts. It offers authentication, filters, and detailed financial insights.",
-    tags: [
-      {
-        name: "Nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Tailwindcss",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Drizzle Orm",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Expressjs",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Neon",
-        color: "White-text-gradient",
-      },
-      {
-        name: "Clerk",
-        color: "blue-text-gradient",
-      },
-    ],
-    "image": budgetbloom,
-    "source_code_link": "https://github.com/Hariprasath2030/Budget-Bloom",
-    "live_demo_link": "https://budget-bloom.vercel.app/"
-  },
+  }, 
   {
     name: "Fest-Book",
     description:
@@ -337,36 +366,6 @@ const projects = [
     "source_code_link": "https://github.com/Hariprasath2030/Heal_Smart_System",
     "live_demo_link": "https://heal-smart-system.vercel.app/"
   },
-  {
-  "name": "Medi-Vox – AI Medical Voice Assistant",
-  "description": "Medi-Vox is a real-time AI medical voice agent built with Next.js, React, and TypeScript. It enables users to speak naturally about health symptoms and receive instant, intelligent, and context-aware medical guidance. Powered by AssemblyAI for STT/TTS, secured with Clerk authentication, and backed by Neon PostgreSQL with encrypted medical records.",
-  "tags": [
-    {
-      "name": "Nextjs",
-      "color": "blue-text-gradient"
-    },
-    {
-      "name": "Reactjs",
-      "color": "green-text-gradient"
-    },
-    {
-      "name": "Typescript",
-      "color": "pink-text-gradient"
-    },
-    {
-      "name": "AssemblyAI",
-      "color": "orange-text-gradient"
-    },
-    {
-      "name": "ClerkAuth",
-      "color": "white-text-gradient"
-    }
-  ],
-  "image": medivox, 
-  "source_code_link": "https://github.com/Hariprasath2030/Medi-Vox",
-  "live_demo_link": "https://medi-vox.vercel.app/"
-}
-
 ];
 
 export { services, technologies, experiences, projects };

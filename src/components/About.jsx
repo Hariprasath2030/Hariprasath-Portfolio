@@ -12,7 +12,7 @@ const ServiceCard = ({ index, title, icon }) => (
     className="relative group"
   >
     <motion.div
-      className="w-full bg-gradient-to-br from-gray-800 to-gray-900 p-[1px] rounded-[20px] shadow-2xl border border-gray-700 hover:border-[#00ff88] transition-all duration-500"
+      className="w-full bg-gradient-to-br from-gray-950 to-gray-900 p-[1px] rounded-[20px] shadow-2xl border border-gray-700 hover:border-[#00ff88] transition-all duration-500"
       whileHover={{
         scale: 1.05,
         rotateY: 10,
@@ -20,7 +20,7 @@ const ServiceCard = ({ index, title, icon }) => (
       }}
       style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="bg-gradient-to-br from-gray-900 to-black rounded-[20px] py-8 px-6 min-h-[280px] flex justify-evenly items-center flex-col relative overflow-hidden">
+      <div className="bg-gradient-to-br from-gray-950 to-black rounded-[20px] py-8 px-6 min-h-[280px] flex justify-evenly items-center flex-col relative overflow-hidden">
         <motion.div
           className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10"
           animate={{

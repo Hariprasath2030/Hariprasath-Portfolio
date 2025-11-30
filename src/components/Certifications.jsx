@@ -279,8 +279,8 @@ const Certifications = () => {
         >
           {[
             { number: "4+", label: "Certifications" },
-            { number: "2+", label: "Years Learning" },
-            { number: "15+", label: "Technologies" },
+            { number: "1+", label: "Years Learning" },
+            { number: "10+", label: "Technologies" },
             { number: "100%", label: "Completion Rate" },
           ].map((stat, index) => (
             <motion.div

@@ -83,7 +83,7 @@ const Contact = () => {
       <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden relative">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.85] bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl border border-gray-700 relative z-10"
+          className="flex-[0.85] bg-gradient-to-br from-gray-950 to-black p-8 rounded-3xl border border-gray-700 relative z-10"
         >
           <motion.div
             className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10 rounded-3xl"

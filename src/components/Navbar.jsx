@@ -151,7 +151,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setToggle(!toggle)}
-            className="w-[32px] h-[32px] flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-200"
+            className="w-[32px] h-[32px] flex items-center justify-center rounded-full bg-gray-950 hover:bg-gray-800 transition-colors duration-200"
           >
             <img
               src={toggle ? close : menu}
@@ -168,7 +168,7 @@ const Navbar = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="absolute top-20 right-0 mx-4 my-2 min-w-[200px] bg-gray-900/95 backdrop-blur-md rounded-2xl border border-gray-700 shadow-2xl"
+                className="absolute top-20 right-0 mx-4 my-2 min-w-[200px] bg-black backdrop-blur-md rounded-2xl border border-gray-700 shadow-2xl"
               >
                 <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4 p-6">
                   {navLinks.map((nav, index) => (
