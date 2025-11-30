@@ -169,7 +169,7 @@ const Hero = () => {
                   >
                     <img
                       src="/src/assets/port.jpg"
-                      alt="Logo"
+                      alt="H"
                       className="w-24 h-24 object-cover"
                     />
                   </motion.div>

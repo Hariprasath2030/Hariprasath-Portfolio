@@ -19,7 +19,6 @@ export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
   );
 };
 
-// MOBILE VERSION
 const FloatingDockMobile = ({ items, className }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -33,10 +32,10 @@ const FloatingDockMobile = ({ items, className }) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.7, y: 15 }}
             transition={{ duration: 0.06, ease: "easeOut" }}
-          >
+    >
             {items.map((item, idx) => (
               <motion.div
-                key={item.title}
+          key={item.title}
                 initial={{ opacity: 0, y: 15, scale: 0.7, rotate: -10 }}
                 animate={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
                 exit={{
@@ -53,7 +52,7 @@ const FloatingDockMobile = ({ items, className }) => {
                 }}
               >
                 <motion.a
-                  href={item.href}
+          href={item.href}
                   target={
                     item.href.startsWith("http") || item.href.endsWith(".pdf")
                       ? "_blank"
@@ -262,14 +261,14 @@ function IconContainer({ mouseX, title, icon, href, index }) {
         href.startsWith("http") || href.endsWith(".pdf") ? "_blank" : "_self"
       }
       rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-      whileHover={{ 
+      whileHover={{
         y: -8,
-        transition: { duration: 0.05, ease: "easeOut" }
+        transition: { duration: 0.05, ease: "easeOut" },
       }}
       whileTap={{
         y: 0,
         scale: 0.9,
-        transition: { duration: 0.03 }
+        transition: { duration: 0.03 },
       }}
     >
       <motion.div
@@ -281,45 +280,45 @@ function IconContainer({ mouseX, title, icon, href, index }) {
         whileHover={{
           scale: 1.15,
           boxShadow: "0 20px 40px rgba(0, 255, 136, 0.4)",
-          transition: { duration: 0.05 }
+          transition: { duration: 0.05 },
         }}
-        whileTap={{ 
+        whileTap={{
           scale: 0.85,
-          transition: { duration: 0.03 }
+          transition: { duration: 0.03 },
         }}
         animate={{
           y: [0, -2, 0],
           rotate: hovered ? [0, -3, 3, 0] : [0, 0.5, -0.5, 0],
-          scale: [1, 1.01, 1]
+          scale: [1, 1.01, 1],
         }}
         transition={{
           y: {
             duration: 1.5 + index * 0.1,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: index * 0.1
+            delay: index * 0.1,
           },
           rotate: {
             duration: hovered ? 0.2 : 3 + index * 0.2,
             ease: "easeInOut",
             repeat: Infinity,
-            delay: index * 0.05
+            delay: index * 0.05,
           },
           scale: {
             duration: 2 + index * 0.1,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: index * 0.05
-          }
+            delay: index * 0.05,
+          },
         }}
       >
         {/* Ultra-fast Background glow */}
         <motion.div
           className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00ff88]/25 to-[#ff6b35]/25"
-          animate={{ 
-            opacity: hovered ? 1 : 0, 
+          animate={{
+            opacity: hovered ? 1 : 0,
             scale: hovered ? 1.15 : 1,
-            rotate: hovered ? 360 : 0
+            rotate: hovered ? 360 : 0,
           }}
           transition={{ duration: 0.05 }}
         />
@@ -334,15 +333,15 @@ function IconContainer({ mouseX, title, icon, href, index }) {
               className="absolute -top-16 left-1/2 w-fit rounded-lg border border-[#00ff88]/50 bg-gray-900/98 backdrop-blur-md px-4 py-2 text-sm font-medium whitespace-pre text-white shadow-2xl z-50"
               transition={{ duration: 0.05 }}
             >
-              <motion.span 
+              <motion.span
                 className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent font-semibold"
                 animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
                 transition={{
                   duration: 1,
                   repeat: Infinity,
-                  ease: "linear"
+                  ease: "linear",
                 }}
               >
                 {title}
@@ -360,33 +359,33 @@ function IconContainer({ mouseX, title, icon, href, index }) {
             rotate: hovered ? [0, -10, 10, 0] : [0, 1, -1, 0],
             scale: hovered ? 1.15 : [1, 1.02, 1],
           }}
-          transition={{ 
+          transition={{
             duration: hovered ? 0.1 : 2 + index * 0.1,
             ease: "easeOut",
-            repeat: Infinity
+            repeat: Infinity,
           }}
         >
           <motion.div
             whileHover={{
               scale: 1.25,
               rotate: 540,
-              transition: { duration: 0.15 }
+              transition: { duration: 0.15 },
             }}
             animate={{
               rotate: hovered ? [0, 8, -8, 0] : 0,
-              scale: [1, 1.03, 1]
+              scale: [1, 1.03, 1],
             }}
             transition={{
               rotate: {
                 duration: hovered ? 0.25 : 0,
-                ease: "easeInOut"
+                ease: "easeInOut",
               },
               scale: {
                 duration: 1.8 + index * 0.1,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: index * 0.05
-              }
+                delay: index * 0.05,
+              },
             }}
           >
             {icon}
@@ -434,13 +433,13 @@ function IconContainer({ mouseX, title, icon, href, index }) {
                   scale: [0, 1.2, 0],
                   y: [0, -25],
                   x: [0, (i - 1.5) * 8],
-                  rotate: [0, 360]
+                  rotate: [0, 360],
                 }}
                 transition={{
                   duration: 0.6,
                   delay: i * 0.05,
                   repeat: Infinity,
-                  repeatDelay: 0.8
+                  repeatDelay: 0.8,
                 }}
               />
             ))}
@@ -452,13 +451,13 @@ function IconContainer({ mouseX, title, icon, href, index }) {
           className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00ff88]/10 to-[#ff6b35]/10"
           animate={{
             scale: [1, 1.05, 1],
-            opacity: [0.3, 0.6, 0.3]
+            opacity: [0.3, 0.6, 0.3],
           }}
           transition={{
             duration: 1.5 + index * 0.1,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: index * 0.1
+            delay: index * 0.1,
           }}
         />
       </motion.div>
