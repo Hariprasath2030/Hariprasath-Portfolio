@@ -3,8 +3,6 @@ import { styles } from "../styles";
 import { FloatingElements } from "./canvas";
 
 const Hero = () => {
-
-
   return (
     <section className="relative w-full h-[100vh] mx-auto overflow-hidden">
       <div className="absolute inset-0 bg-black"></div>
@@ -46,7 +44,7 @@ const Hero = () => {
                   transition={{ duration: 1, delay: 0.2 }}
                 >
                   <h1
-                    className={`${styles.heroHeadText} text-[38px] sm:text-[48px] text-white mb-4`}
+                    className={`${styles.heroHeadText} text-[38px] sm:text-[48px] lg:text-[60px]  text-white mb-4`}
                   >
                     Hi, I'm{" "}
                     <motion.span
@@ -71,7 +69,7 @@ const Hero = () => {
                   transition={{ duration: 1, delay: 0.5 }}
                 >
                   <p
-                    className={`${styles.heroSubText} text-[15px] sm:text-[18px] mt-2 text-white-100 max-w-3xl leading-relaxed`}
+                    className={`${styles.heroSubText} text-[15px] sm:text-[18px] lg:text-[24px] mt-2 text-white-100 max-w-3xl leading-relaxed`}
                   >
                     Full Stack Developer specializing in{" "}
                     <motion.span
@@ -122,8 +120,6 @@ const Hero = () => {
                     Get In Touch
                   </motion.button>
                 </motion.div>
-
-           
               </div>
             </div>
           </div>
