@@ -53,7 +53,7 @@ const FloatingTechCard = ({ technology, index }) => {
         style={{ transformStyle: "preserve-3d" }}
       >
         <motion.div
-          className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-4 flex items-center justify-center cursor-pointer border border-gray-700 hover:border-[#00ff88] transition-all duration-300 relative overflow-hidden"
+          className="w-full h-full bg-gradient-to-br from-gray-950 to-gray-900 rounded-2xl p-4 flex items-center justify-center cursor-pointer border border-gray-700 hover:border-[#00ff88] transition-all duration-300 relative overflow-hidden"
           whileHover={{
             scale: 1.1,
             boxShadow: "0 20px 40px rgba(0, 255, 136, 0.3)",
@@ -260,7 +260,7 @@ const Tech = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-700 max-w-4xl mx-auto"
+            className="bg-gradient-to-r from-gray-950 to-black backdrop-blur-sm rounded-3xl p-8 border border-gray-700 max-w-4xl mx-auto"
             whileHover={{
               borderColor: "#00ff88",
               boxShadow: "0 20px 40px rgba(0, 255, 136, 0.1)",
@@ -292,7 +292,6 @@ const Tech = () => {
               .
             </motion.p>
 
-            {/* Skill Categories */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               {[
                 {
@@ -313,7 +312,7 @@ const Tech = () => {
               ].map((category, index) => (
                 <motion.div
                   key={category.title}
-                  className="text-center p-4 bg-gray-800/30 rounded-2xl border border-gray-600"
+                  className="text-center p-4 bg-gray-950 rounded-2xl border border-gray-600"
                   whileHover={{
                     scale: 1.05,
                     borderColor: "#00ff88",
