@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { FloatingElements } from "./canvas";
+import portImage from "../assets/port.jpg";
 
 const Hero = () => {
   return (
@@ -168,7 +169,7 @@ const Hero = () => {
                     }}
                   >
                     <img
-                      src="/src/assets/port.jpg"
+                      src={portImage}
                       alt="H"
                       className="w-24 h-24 object-cover"
                     />
