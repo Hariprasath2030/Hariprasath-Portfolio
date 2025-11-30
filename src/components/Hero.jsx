@@ -4,7 +4,7 @@ import { FloatingElements } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-[100vh] mx-auto overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center mx-auto overflow-hidden">
       <div className="absolute inset-0 bg-black"></div>
       <FloatingElements />
       <div
