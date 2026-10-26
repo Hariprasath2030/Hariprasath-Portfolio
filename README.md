@@ -4,6 +4,8 @@ A responsive, monochrome portfolio built with the Next.js App Router. It present
 
 ## Run locally
 
+Use Node.js 24.x.
+
 ```bash
 npm install
 npm run dev

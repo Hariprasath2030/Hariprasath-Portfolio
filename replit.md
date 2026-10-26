@@ -1,6 +1,7 @@
 # Running this project on Replit
 
 - This project uses Next.js App Router.
+- The project targets Node.js 24.x, matching its Vercel deployment runtime.
 - The `Start application` workflow runs `npm run dev` on `0.0.0.0:5000`.
 - Use `npm run build` to make a production build and `npm start` to serve it.
 - The app's routes and reusable page components live in `app/`; portfolio content is data-driven in `app/data/portfolio.js`.
