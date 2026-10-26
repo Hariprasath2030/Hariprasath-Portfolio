@@ -12,17 +12,17 @@ const ServiceCard = ({ index, title, icon }) => (
     className="relative group"
   >
     <motion.div
-      className="w-full bg-gradient-to-br from-gray-950 to-gray-900 p-[1px] rounded-[20px] shadow-2xl border border-gray-700 hover:border-[#00ff88] transition-all duration-500"
+      className="w-full bg-gradient-to-br from-gray-950 to-gray-900 p-[1px] rounded-[20px] shadow-2xl border border-gray-700 hover:border-white transition-all duration-500"
       whileHover={{
         scale: 1.05,
         rotateY: 10,
-        boxShadow: "0 25px 50px rgba(0, 255, 136, 0.2)",
+        boxShadow: "0 25px 50px rgba(255, 255, 255, 0.14)",
       }}
       style={{ transformStyle: "preserve-3d" }}
     >
       <div className="bg-gradient-to-br from-gray-950 to-black rounded-[20px] py-8 px-6 min-h-[280px] flex justify-evenly items-center flex-col relative overflow-hidden">
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10"
+          className="absolute inset-0 bg-white/5"
           animate={{
             opacity: [0.3, 0.6, 0.3],
             scale: [1, 1.05, 1],
@@ -52,7 +52,7 @@ const ServiceCard = ({ index, title, icon }) => (
         {[...Array(4)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-[#00ff88] rounded-full"
+            className="absolute w-1 h-1 bg-white rounded-full"
             style={{
               left: `${20 + i * 20}%`,
               top: `${20 + i * 15}%`,
@@ -93,7 +93,7 @@ const About = () => {
             Get to know me
           </p>
           <h2 className={`${styles.sectionHeadText} text-center mb-8`}>
-            <span className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent">
+            <span className="text-white">
               About Me
             </span>
           </h2>
@@ -116,11 +116,11 @@ const About = () => {
               style={{ transformStyle: "preserve-3d" }}
             >
               <motion.div
-                className="w-80 h-80 rounded-3xl overflow-hidden border-4 border-[#00ff88]/30 shadow-2xl"
+                className="w-80 h-80 rounded-3xl overflow-hidden border-4 border-white/30 shadow-2xl"
                 animate={{
                   boxShadow: [
-                    "0 0 0 0 rgba(0, 255, 136, 0.4)",
-                    "0 0 0 20px rgba(0, 255, 136, 0)",
+                    "0 0 0 0 rgba(255, 255, 255, 0.2)",
+                    "0 0 0 20px rgba(255, 255, 255, 0)",
                   ],
                 }}
                 transition={{
@@ -175,7 +175,7 @@ const About = () => {
                   variants={fadeIn("up", "spring", 0.5 + index * 0.1, 0.6)}
                 >
                   <motion.div
-                    className="w-16 h-16 bg-gradient-to-br from-[#00ff88] to-[#ff6b35] rounded-full flex items-center justify-center mb-2 mx-auto"
+                    className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-2 mx-auto"
                     whileHover={{
                       scale: 1.1,
                       rotate: 360,
@@ -247,7 +247,7 @@ const About = () => {
             <motion.div variants={fadeIn("", "", 0.4, 1)}>
               <motion.button
                 onClick={handleDownloadResume}
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 20px 40px rgba(0, 255, 136, 0.3)",

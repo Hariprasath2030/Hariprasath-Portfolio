@@ -314,7 +314,7 @@ function IconContainer({ mouseX, title, icon, href, index }) {
       >
         {/* Ultra-fast Background glow */}
         <motion.div
-          className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00ff88]/25 to-[#ff6b35]/25"
+          className="absolute inset-0 rounded-full bg-white/10"
           animate={{
             opacity: hovered ? 1 : 0,
             scale: hovered ? 1.15 : 1,
@@ -334,7 +334,7 @@ function IconContainer({ mouseX, title, icon, href, index }) {
               transition={{ duration: 0.05 }}
             >
               <motion.span
-                className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent font-semibold"
+                className="text-white font-semibold"
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
@@ -448,7 +448,7 @@ function IconContainer({ mouseX, title, icon, href, index }) {
 
         {/* Pulsing glow effect */}
         <motion.div
-          className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00ff88]/10 to-[#ff6b35]/10"
+          className="absolute inset-0 rounded-full bg-white/5"
           animate={{
             scale: [1, 1.05, 1],
             opacity: [0.3, 0.6, 0.3],

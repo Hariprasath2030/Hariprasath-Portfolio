@@ -33,35 +33,35 @@ const Footer = () => {
     {
       title: "LinkedIn",
       icon: (
-        <IconBrandLinkedin className="h-full w-full text-[#0077b5] hover:text-[#00ff88] transition-all duration-500 hover:scale-110" />
+        <IconBrandLinkedin className="h-full w-full text-gray-300 hover:text-[#ffffff] transition-all duration-500 hover:scale-110" />
       ),
       href: "https://www.linkedin.com/in/hariprasath-v-ab5006276",
     },
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className="h-full w-full text-white hover:text-[#00ff88] transition-all duration-500 hover:scale-110 hover:rotate-12" />
+        <IconBrandGithub className="h-full w-full text-white hover:text-[#ffffff] transition-all duration-500 hover:scale-110 hover:rotate-12" />
       ),
       href: "https://github.com/Hariprasath2030",
     },
     {
       title: "Instagram",
       icon: (
-        <IconBrandInstagram className="h-full w-full text-[#e4405f] hover:text-[#ff6b35] transition-all duration-500 hover:scale-110 hover:rotate-[-12deg]" />
+        <IconBrandInstagram className="h-full w-full text-gray-300 hover:text-[#ffffff] transition-all duration-500 hover:scale-110 hover:rotate-[-12deg]" />
       ),
       href: "https://www.instagram.com/hearty_soul_016?igsh=MTNoNWFjdXp0MzN6Ng==",
     },
     {
       title: "Twitter",
       icon: (
-        <IconBrandTwitter className="h-full w-full text-[#1da1f2] hover:text-[#00ff88] transition-all duration-500 hover:scale-110 hover:rotate-6" />
+        <IconBrandTwitter className="h-full w-full text-gray-300 hover:text-[#ffffff] transition-all duration-500 hover:scale-110 hover:rotate-6" />
       ),
       href: "https://x.com/Hariprasat67463?t=pBW9m_AzJkdc5RXmVmPbiw&s=09",
     },
     {
       title: "LeetCode",
       icon: (
-        <IconCode className="h-full w-full text-[#ffa116] hover:text-[#ff6b35] transition-all duration-500 hover:scale-110 hover:rotate-[-6deg]" />
+        <IconCode className="h-full w-full text-gray-300 hover:text-[#ffffff] transition-all duration-500 hover:scale-110 hover:rotate-[-6deg]" />
       ),
       href: "https://leetcode.com/u/hariprasath2030/",
     },
@@ -113,14 +113,14 @@ const Footer = () => {
                 ease: "linear",
               }}
             >
-              <span className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent">
+              <span className="bg-white bg-clip-text text-transparent">
                 Hari Prasath
               </span>
             </motion.h3>
             <p className="text-gray-300 text-base sm:text-lg mb-6 leading-relaxed">
               Passionate Information Technology professional with a strong focus
               on full-stack development, specializing in the
-              <span className="text-[#00ff88] font-semibold">
+              <span className="text-[#ffffff] font-semibold">
                 {" "}
                 MERN stack Development
               </span>
@@ -129,10 +129,10 @@ const Footer = () => {
             </p>
             <div className="space-y-3 text-sm sm:text-base">
               <motion.div
-                className="flex items-center gap-3 text-gray-300 hover:text-[#00ff88] transition-colors duration-300"
+                className="flex items-center gap-3 text-gray-300 hover:text-[#ffffff] transition-colors duration-300"
                 whileHover={{ x: 5 }}
               >
-                <FaEnvelope className="text-[#00ff88]" />
+                <FaEnvelope className="text-[#ffffff]" />
                 <a
                   href="mailto:officialhari2030@gmail.com"
                   className="hover:underline"
@@ -142,10 +142,10 @@ const Footer = () => {
               </motion.div>
 
               <motion.div
-                className="flex items-center gap-3 text-gray-300 hover:text-[#00ff88] transition-colors duration-300"
+                className="flex items-center gap-3 text-gray-300 hover:text-[#ffffff] transition-colors duration-300"
                 whileHover={{ x: 5 }}
               >
-                <FaPhone className="text-[#00ff88]" />
+                <FaPhone className="text-[#ffffff]" />
                 <a href="tel:+918925425514" className="hover:underline">
                   +91 8925425514
                 </a>
@@ -155,7 +155,7 @@ const Footer = () => {
                 className="flex items-center gap-3 text-gray-300"
                 whileHover={{ x: 5 }}
               >
-                <FaMapMarkerAlt className="text-[#00ff88]" />
+                <FaMapMarkerAlt className="text-[#ffffff]" />
                 <span>Tirupattur, Tamil Nadu, India</span>
               </motion.div>
             </div>
@@ -168,7 +168,7 @@ const Footer = () => {
             whileInView="show"
             viewport={{ once: true }}
           >
-            <h4 className="text-xl font-bold mb-6 text-[#00ff88]">
+            <h4 className="text-xl font-bold mb-6 text-[#ffffff]">
               Quick Links
             </h4>
             <ul className="space-y-3 text-sm sm:text-base">
@@ -180,9 +180,9 @@ const Footer = () => {
                 >
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-[#ff6b35] transition-colors duration-300 flex items-center gap-2"
+                    className="text-gray-300 hover:text-[#ffffff] transition-colors duration-300 flex items-center gap-2"
                   >
-                    <span className="w-1 h-1 bg-[#00ff88] rounded-full"></span>
+                    <span className="w-1 h-1 bg-[#ffffff] rounded-full"></span>
                     {link.name}
                   </a>
                 </motion.li>
@@ -197,7 +197,7 @@ const Footer = () => {
             whileInView="show"
             viewport={{ once: true }}
           >
-            <h4 className="text-xl font-bold mb-6 text-[#00ff88]">Services</h4>
+            <h4 className="text-xl font-bold mb-6 text-[#ffffff]">Services</h4>
             <div className="space-y-4">
               {services.map((service) => (
                 <motion.div
@@ -206,10 +206,10 @@ const Footer = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="flex items-start gap-3 p-3 rounded-lg bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 border border-gray-700 hover:border-[#00ff88]/30">
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 border border-gray-700 hover:border-[#ffffff]/30">
                     <span className="text-xl sm:text-2xl">{service.icon}</span>
                     <div>
-                      <h5 className="font-semibold text-white group-hover:text-[#00ff88] transition-colors duration-300">
+                      <h5 className="font-semibold text-white group-hover:text-[#ffffff] transition-colors duration-300">
                         {service.title}
                       </h5>
                       <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
@@ -222,7 +222,7 @@ const Footer = () => {
             </div>
           </motion.div>
           <div className="lg:col-span-4 flex flex-col items-start">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl font-bold bg-white bg-clip-text text-transparent mb-6">
               Connect on Social Media...🌐
             </h2>
 
@@ -234,7 +234,7 @@ const Footer = () => {
             >
               <FloatingDock
                 mobileClassName="translate-y-10 -translate-x-5"
-                desktopClassName="bg-gray-900/30 backdrop-blur-md border border-[#00ff88]/20 hover:border-[#00ff88]/40 transition-all duration-300"
+                desktopClassName="bg-gray-900/30 backdrop-blur-md border border-[#ffffff]/20 hover:border-[#ffffff]/40 transition-all duration-300"
                 items={dockLinks}
               />
             </motion.div>
@@ -242,7 +242,7 @@ const Footer = () => {
         </div>
 
         <motion.div
-          className="w-full h-px bg-gradient-to-r from-transparent via-[#00ff88] to-transparent mb-8"
+          className="w-full h-px bg-gradient-to-r from-transparent via-[#ffffff] to-transparent mb-8"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
@@ -281,7 +281,7 @@ const Footer = () => {
               <motion.span
                 animate={{
                   scale: [1, 1.2, 1],
-                  color: ["#ff6b35", "#00ff88", "#ff6b35"],
+                  color: ["#ffffff", "#ffffff", "#ffffff"],
                 }}
                 transition={{
                   duration: 2,
@@ -289,7 +289,7 @@ const Footer = () => {
                   ease: "easeInOut",
                 }}
               >
-                <FaHeart className="text-red-500" />
+                <FaHeart className="text-white" />
               </motion.span>
               using React & Framer Motion
             </motion.p>
@@ -300,7 +300,7 @@ const Footer = () => {
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] rounded-full opacity-20"
+            className="absolute w-2 h-2 bg-white rounded-full opacity-20"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,

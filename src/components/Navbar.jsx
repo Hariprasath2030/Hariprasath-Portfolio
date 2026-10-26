@@ -32,7 +32,7 @@ const Navbar = () => {
   const linkVariants = {
     hover: {
       scale: 1.1,
-      color: "#00ff88",
+      color: "#ffffff",
       transition: { duration: 0.2 },
     },
   };
@@ -93,7 +93,7 @@ const Navbar = () => {
               className="w-10 h-10 object-contain rounded-full"
             />
             <motion.div
-              className="absolute inset-0 rounded-full border-2 border-[#3eff45]"
+              className="absolute inset-0 rounded-full border-2 border-white"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 1, 0.5],
@@ -111,7 +111,7 @@ const Navbar = () => {
               <span className="text-white bg-clip-text text-transparent">
                 Hariprasath
               </span>
-              <span className="sm:block hidden bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent ml-2">
+              <span className="sm:block hidden text-white ml-2">
                 | Full Stack Developer
               </span>
             </p>
@@ -125,15 +125,15 @@ const Navbar = () => {
               variants={linkVariants}
               whileHover="hover"
               className={`${
-                active === nav.title ? "text-[#00ff88]" : "text-gray-300"
-              } hover: text-[#ff6b35] text-[18px] font-medium cursor-pointer transition-colors duration-200 relative`}
+                active === nav.title ? "text-white" : "text-gray-300"
+              } hover: text-white text-[18px] font-medium cursor-pointer transition-colors duration-200 relative`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`} className="relative">
                 {nav.title}
                 {active === nav.title && (
                   <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#00ff88] to-[#ff6b35]"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white"
                     layoutId="activeTab"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -182,9 +182,9 @@ const Navbar = () => {
                       }}
                       className={`font-poppins font-medium cursor-pointer text-[16px] ${
                         active === nav.title
-                          ? "text-[#6bff60]"
+                          ? "text-white"
                           : "text-gray-300"
-                      } hover:text-[#ff8f45b6] transition-colors duration-200 w-full`}
+                      } hover:text-white transition-colors duration-200 w-full`}
                       onClick={() => {
                         setToggle(false);
                         setActive(nav.title);

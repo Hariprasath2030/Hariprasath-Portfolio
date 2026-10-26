@@ -20,7 +20,7 @@ const Hero = () => {
                   animate={{
                     scale: [1, 1.2, 1],
                     boxShadow: [
-                      "0 0 0 0 rgba(0, 255, 136, 0.7)",
+                      "0 0 0 0 rgba(255, 255, 255, 0.7)",
                       "0 0 0 10px rgba(0, 255, 136, 0)",
                       "0 0 0 0 rgba(0, 255, 136, 0)",
                     ],
@@ -32,7 +32,7 @@ const Hero = () => {
                   }}
                 />
                 <motion.div
-                  className="w-1 h-40 sm:h-80 bg-gradient-to-b from-[#00ff88] to-transparent"
+                  className="w-1 h-40 sm:h-80 bg-gradient-to-b from-white to-transparent"
                   initial={{ height: 0 }}
                   animate={{ height: ["0px", "320px"] }}
                   transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
@@ -96,7 +96,7 @@ const Hero = () => {
                     className="px-8 py-3 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{
                       scale: 1.05,
-                      boxShadow: "0 20px 40px rgba(0, 255, 136, 0.3)",
+                      boxShadow: "0 20px 40px rgba(255, 255, 255, 0.16)",
                     }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() =>
@@ -109,7 +109,7 @@ const Hero = () => {
                   </motion.button>
 
                   <motion.button
-                    className="px-8 py-3 border-2 border-[#00ff88] text-[#00ff88] font-semibold rounded-full hover:bg-[#00ff88] hover:text-black transition-all duration-300"
+                    className="px-8 py-3 border-2 border-white text-[#00ff88] font-semibold rounded-full hover:bg-[#00ff88] hover:text-black transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() =>
@@ -142,7 +142,7 @@ const Hero = () => {
               }}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-900 rounded-3xl shadow-2xl border border-gray-700"
+                className="absolute inset-0 bg-[#111111] border border-[#292929] rounded-3xl shadow-2xl border border-gray-700"
                 style={{
                   transformStyle: "preserve-3d",
                   transform: "rotateX(15deg) rotateY(15deg)",
@@ -152,7 +152,7 @@ const Hero = () => {
                 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-4 bg-gradient-to-br from-black to-[#ff6b35]/10 rounded-2xl p-6 flex flex-col justify-center items-center text-center">
+                <div className="absolute inset-4 bg-gradient-to-br from-black to-white/5 rounded-2xl p-6 flex flex-col justify-center items-center text-center">
                   <motion.div
                     className="w-20 h-20 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] rounded-full mb-4 flex items-center justify-center overflow-hidden"
                     animate={{

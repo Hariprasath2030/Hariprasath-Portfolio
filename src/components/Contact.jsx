@@ -73,7 +73,7 @@ const Contact = () => {
         >
           <p className={`${styles.sectionSubText} text-center`}>Get in touch</p>
           <h3 className={`${styles.sectionHeadText} text-center mb-2`}>
-            <span className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent">
+            <span className="text-white">
               Contact Me
             </span>
           </h3>
@@ -86,7 +86,7 @@ const Contact = () => {
           className="flex-[0.85] bg-gradient-to-br from-gray-950 to-black p-8 rounded-3xl border border-gray-700 relative z-10"
         >
           <motion.div
-            className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10 rounded-3xl"
+            className="absolute inset-0 bg-white/5 rounded-3xl"
             animate={{ opacity: [0.3, 0.6, 0.3] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -171,7 +171,7 @@ const Contact = () => {
               <motion.button
                 type="submit"
                 disabled={loading}
-                className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] py-4 px-8 rounded-2xl outline-none w-fit text-white font-bold shadow-md shadow-primary flex items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-white text-black py-4 px-8 rounded-2xl outline-none w-fit text-white font-bold shadow-md shadow-primary flex items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
                 whileHover={{
                   scale: loading ? 1 : 1.05,
                   boxShadow: loading

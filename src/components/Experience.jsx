@@ -25,7 +25,7 @@ const ExperienceCard = ({ experience }) => {
       contentArrowStyle={{ borderRight: "7px solid #1a1b1b" }}
       date={
         <span style={{ 
-          color: "#00ff88", 
+          color: "#ffffff", 
           fontWeight: "bold",
           fontSize: "16px"
         }}>
@@ -33,8 +33,8 @@ const ExperienceCard = ({ experience }) => {
         </span>
       }
       iconStyle={{ background: "#fff",
-        border: "3px solid #00ff88",
-        boxShadow: "0 0 20px rgba(0, 255, 136, 0.3)"
+        border: "3px solid #ffffff",
+        boxShadow: "0 0 20px rgba(255, 255, 255, 0.16)"
       }}
       icon={
         <div className='flex justify-center items-center w-full h-full'>
@@ -51,7 +51,7 @@ const ExperienceCard = ({ experience }) => {
           {experience.title}
         </h3>
         <p
-          className='text-[#00ff88] text-[16px] font-semibold'
+          className='text-white text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
           {experience.company_name}

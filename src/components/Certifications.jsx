@@ -24,7 +24,7 @@ const certifications = [
       "Microservices",
       "JPA/Hibernate",
     ],
-    color: "from-green-400 to-blue-500",
+    color: "from-gray-500 to-white",
     certificateFile: "Spring.pdf",
   },
   {
@@ -40,7 +40,7 @@ const certifications = [
       "Node.js",
       "JWT Authentication",
     ],
-    color: "from-purple-400 to-pink-500",
+    color: "from-gray-600 to-gray-300",
     certificateFile: "Mern.pdf",
   },
   {
@@ -57,7 +57,7 @@ const certifications = [
       "MySQL",
       "Responsive Design",
     ],
-    color: "from-orange-400 to-red-500",
+    color: "from-gray-700 to-gray-200",
     certificateFile: "Cognify.pdf",
   },
   {
@@ -67,7 +67,7 @@ const certifications = [
     description:
       "Completed an introductory course on DevOps covering core concepts, tools, and practices essential for continuous integration, deployment, and automation in modern software development.",
     skills: ["DevOps", "CI/CD", "Automation", "Software Development Lifecycle"],
-    color: "from-blue-500 to-green-500",
+    color: "from-gray-400 to-gray-100",
     certificateFile: "Devops.pdf",
   },
 ];
@@ -89,10 +89,10 @@ const CertificationCard = ({ certification, index }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
-        className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl border border-gray-700 hover:border-[#00ff88] transition-all duration-500 cursor-pointer overflow-hidden"
+        className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl border border-gray-700 hover:border-[#ffffff] transition-all duration-500 cursor-pointer overflow-hidden"
         whileHover={{
           y: -10,
-          boxShadow: "0 25px 50px rgba(0, 255, 136, 0.2)",
+          boxShadow: "0 25px 50px rgba(255, 255, 255, 0.14)",
         }}
         style={{
           transformStyle: "preserve-3d",
@@ -110,7 +110,7 @@ const CertificationCard = ({ certification, index }) => {
         <div className="relative z-10 mb-4">
           <div className="flex items-center justify-between mb-4">
             <motion.div
-              className="p-3 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] rounded-2xl"
+              className="p-3 bg-gradient-to-r from-[#ffffff] to-[#ffffff] rounded-2xl"
               animate={{
                 rotate: isHovered ? 360 : 0,
                 scale: isHovered ? 1.1 : 1,
@@ -121,7 +121,7 @@ const CertificationCard = ({ certification, index }) => {
             </motion.div>
 
             <motion.button
-              className="p-4 bg-gray-700 rounded-full hover:bg-[#00ff88] transition-colors duration-300"
+              className="p-4 bg-gray-700 rounded-full hover:bg-[#ffffff] transition-colors duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleDownloadCertificate}
@@ -134,7 +134,7 @@ const CertificationCard = ({ certification, index }) => {
           <motion.h3
             className="text-white font-bold text-xl mb-2"
             animate={{
-              color: isHovered ? "#00ff88" : "#ffffff",
+              color: isHovered ? "#ffffff" : "#ffffff",
             }}
             transition={{ duration: 0.3 }}
           >
@@ -142,12 +142,12 @@ const CertificationCard = ({ certification, index }) => {
           </motion.h3>
 
           <div className="flex items-center gap-2 text-gray-300 text-sm mb-2">
-            <FaAward className="text-[#ff6b35]" />
+            <FaAward className="text-[#ffffff]" />
             <span>{certification.issuer}</span>
           </div>
 
           <div className="flex items-center gap-2 text-gray-400 text-sm">
-            <FaCalendarAlt className="text-[#00ff88]" />
+            <FaCalendarAlt className="text-[#ffffff]" />
             <span>{certification.date}</span>
           </div>
         </div>
@@ -160,7 +160,7 @@ const CertificationCard = ({ certification, index }) => {
           {certification.skills.map((skill, skillIndex) => (
             <motion.span
               key={skill}
-              className="text-xs px-3 py-1 bg-gray-700 text-[#00ff88] rounded-full border border-gray-600 hover:border-[#00ff88] transition-colors duration-300"
+              className="text-xs px-3 py-1 bg-gray-700 text-[#ffffff] rounded-full border border-gray-600 hover:border-[#ffffff] transition-colors duration-300"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{
                 opacity: 1,
@@ -182,7 +182,7 @@ const CertificationCard = ({ certification, index }) => {
             {[...Array(3)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-2 h-2 bg-[#00ff88] rounded-full"
+                className="absolute w-2 h-2 bg-[#ffffff] rounded-full"
                 style={{
                   right: `${10 + i * 15}%`,
                   top: `${10 + i * 10}%`,
@@ -217,7 +217,7 @@ const Certifications = () => {
             Professional Achievements
           </p>
           <h2 className={`${styles.sectionHeadText} text-center mb-4`}>
-            <span className="bg-gradient-to-r from-[#ff6b35] to-[#00ff88] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent">
               Certifications & Training
             </span>
           </h2>
@@ -241,10 +241,10 @@ const Certifications = () => {
           variants={fadeIn("", "", 0.2, 1)}
         >
           <motion.p
-            className="text-[#00ff88] text-[16px] font-semibold bg-gray-800/50 px-6 py-2 rounded-full border border-[#00ff88]/30"
+            className="text-[#ffffff] text-[16px] font-semibold bg-gray-800/50 px-6 py-2 rounded-full border border-[#ffffff]/30"
             animate={{
               boxShadow: [
-                "0 0 0 0 rgba(0, 255, 136, 0.4)",
+                "0 0 0 0 rgba(255, 255, 255, 0.2)",
                 "0 0 0 10px rgba(0, 255, 136, 0)",
               ],
             }}
@@ -288,11 +288,11 @@ const Certifications = () => {
               className="text-center p-4 bg-gray-800/50 rounded-2xl border border-gray-700"
               whileHover={{
                 scale: 1.05,
-                borderColor: "#00ff88",
+                borderColor: "#ffffff",
               }}
               transition={{ duration: 0.3 }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-[#00ff88] mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#ffffff] mb-2">
                 {stat.number}
               </h3>
               <p className="text-gray-300 text-sm">{stat.label}</p>

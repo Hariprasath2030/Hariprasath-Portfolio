@@ -28,7 +28,7 @@ const ProjectCard = ({
         className="bg-gradient-to-br from-gray-950 to-gray-950 p-6 rounded-3xl w-full sm:w-[360px] border border-gray-700 hover:border-[#00ff88] transition-all duration-500 cursor-pointer overflow-hidden"
         whileHover={{
           y: -10,
-          boxShadow: "0 25px 50px rgba(0, 255, 136, 0.2)",
+          boxShadow: "0 25px 50px rgba(255, 255, 255, 0.14)",
         }}
         onClick={() => window.open(live_demo_link, "_blank")}
         style={{
@@ -37,7 +37,7 @@ const ProjectCard = ({
       >
         {/* Animated Background Gradient */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10 rounded-3xl"
+          className="absolute inset-0 bg-white/5 rounded-3xl"
           animate={{
             opacity: isHovered ? 1 : 0,
             scale: isHovered ? 1.02 : 1,
@@ -102,7 +102,7 @@ const ProjectCard = ({
           <motion.h3
             className="text-white font-bold text-[24px] mb-3"
             animate={{
-              color: isHovered ? "#00ff88" : "#ffffff",
+              color: isHovered ? "#ffffff" : "#ffffff",
             }}
             transition={{ duration: 0.3 }}
           >
@@ -123,7 +123,7 @@ const ProjectCard = ({
                 animate={{
                   opacity: 1,
                   scale: 1,
-                  borderColor: isHovered ? "#00ff88" : "currentColor",
+                  borderColor: isHovered ? "#ffffff" : "currentColor",
                 }}
                 transition={{
                   duration: 0.3,
@@ -177,7 +177,7 @@ const Works = () => {
         <motion.div variants={textVariant()}>
           <p className={`${styles.sectionSubText} text-center`}>My Portfolio</p>
           <h2 className={`${styles.sectionHeadText} text-center mb-4`}>
-            <span className="bg-gradient-to-r from-[#ff6b35] to-[#00ff88] bg-clip-text text-transparent">
+            <span className="text-white">
               Featured Projects
             </span>
           </h2>
@@ -201,10 +201,10 @@ const Works = () => {
           variants={fadeIn("", "", 0.2, 1)}
         >
           <motion.p
-            className="text-[#00ff88] text-[16px] font-semibold bg-gray-800/50 px-6 py-2 rounded-full border border-[#00ff88]/30"
+            className="text-black text-[16px] font-semibold bg-gray-800/50 px-6 py-2 rounded-full border border-[#00ff88]/30"
             animate={{
               boxShadow: [
-                "0 0 0 0 rgba(0, 255, 136, 0.4)",
+                "0 0 0 0 rgba(255, 255, 255, 0.2)",
                 "0 0 0 10px rgba(0, 255, 136, 0)",
               ],
             }}
