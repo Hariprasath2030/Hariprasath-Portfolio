@@ -38,12 +38,20 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <a className="wordmark" href="#home" onClick={closeMenu} aria-label="Hariprasath R, home">
-          <span className="wordmark-mark">HR</span>
-          <span className="wordmark-name">Hariprasath R</span>
+        <a
+          className="wordmark"
+          href="#home"
+          onClick={closeMenu}
+          aria-label="Hariprasath V, home"
+        >
+          <span className="wordmark-mark">H V</span>
+          <span className="wordmark-name">Hariprasath V</span>
         </a>
 
-        <nav className={`desktop-nav${menuOpen ? " nav-open" : ""}`} aria-label="Main navigation">
+        <nav
+          className={`desktop-nav${menuOpen ? " nav-open" : ""}`}
+          aria-label="Main navigation"
+        >
           {navLinks.map((link) => (
             <a
               key={link.id}
@@ -54,18 +62,30 @@ export default function SiteHeader() {
               {link.label}
             </a>
           ))}
-          <a className="nav-mobile-resume" href="/HARIPRASATH_R.pdf" target="_blank" rel="noreferrer">
+          <a
+            className="nav-mobile-resume"
+            href="/HARIPRASATH_R.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
             Resume <span aria-hidden="true">↗</span>
           </a>
         </nav>
 
-        <a className="header-resume" href="/HARIPRASATH_R.pdf" target="_blank" rel="noreferrer">
+        <a
+          className="header-resume"
+          href="/HARIPRASATH_R.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
           Resume <span aria-hidden="true">↗</span>
         </a>
         <button
           className={`menu-toggle${menuOpen ? " menu-toggle-open" : ""}`}
           type="button"
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setMenuOpen((open) => !open)}
@@ -90,10 +110,18 @@ export default function SiteHeader() {
           >
             <span className="mobile-nav-index">0{index + 1}</span>
             {link.label}
-            <span className="mobile-nav-arrow" aria-hidden="true">↗</span>
+            <span className="mobile-nav-arrow" aria-hidden="true">
+              ↗
+            </span>
           </a>
         ))}
-        <a className="mobile-resume-link" href="/HARIPRASATH_R.pdf" target="_blank" rel="noreferrer" tabIndex={menuOpen ? 0 : -1}>
+        <a
+          className="mobile-resume-link"
+          href="/HARIPRASATH_R.pdf"
+          target="_blank"
+          rel="noreferrer"
+          tabIndex={menuOpen ? 0 : -1}
+        >
           View resume <span aria-hidden="true">↗</span>
         </a>
       </nav>

@@ -6,16 +6,29 @@ export default function Footer() {
       <div className="container">
         <div className="footer-row">
           <div>
-            <a className="footer-brand" href="#home">Hariprasath R</a>
-            <p className="footer-note">Full-stack developer · Tirupattur, India</p>
+            <a className="footer-brand" href="#home">
+              Hariprasath V
+            </a>
+            <p className="footer-note">
+              Full-stack developer · Tirupattur, India
+            </p>
           </div>
           <nav className="social-links" aria-label="Social profiles">
             {socialLinks.map((link) => (
-              <a key={link.label} href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.label}
+              </a>
             ))}
           </nav>
         </div>
-        <p className="copyright">© {new Date().getFullYear()} Hariprasath R. All rights reserved.</p>
+        <p className="copyright">
+          © {new Date().getFullYear()} Hariprasath V. All rights reserved.
+        </p>
       </div>
     </footer>
   );

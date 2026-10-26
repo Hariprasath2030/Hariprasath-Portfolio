@@ -8,7 +8,7 @@ import healthcare from "../../src/assets/healthcare.png";
 import portrait from "../../src/assets/port.jpg";
 
 export const profile = {
-  name: "Hariprasath R",
+  name: "Hariprasath V",
   email: "officialhari2030@gmail.com",
   phone: "+91 8925425514",
   location: "Tirupattur, Tamil Nadu, India",

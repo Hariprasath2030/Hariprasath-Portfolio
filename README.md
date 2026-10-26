@@ -1,4 +1,4 @@
-# Hariprasath R — Portfolio
+# Hariprasath V — Portfolio
 
 A responsive, monochrome portfolio built with the Next.js App Router. It presents Hariprasath's experience, certifications, skills, selected projects, and contact details.
 
