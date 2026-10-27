@@ -1,34 +1,33 @@
 import ContactForm from "../ContactForm";
 import SectionHeading from "../SectionHeading";
-import { profile } from "../../data/portfolio";
 
-export default function Contact() {
+export default function Contact({ content, settings, ui }) {
   return (
     <section className="section" id="contact">
       <div className="container">
         <SectionHeading
-          index="06"
-          eyebrow="Start a conversation"
-          title="Have a good problem to solve?"
-          description="For a project, collaboration, or just to say hello, I’d be glad to hear from you."
+          index={content.index}
+          eyebrow={content.eyebrow}
+          title={content.title}
+          description={content.description}
         />
         <div className="contact-layout">
           <aside className="contact-aside reveal">
-            <p>Reach out directly or leave a note. I’m always interested in thoughtful work and good conversations.</p>
+            <p>{content.asideText}</p>
             <div className="contact-detail">
-              <span className="contact-detail-label">Email</span>
-              <a href={`mailto:${profile.email}`}>{profile.email}</a>
+              <span className="contact-detail-label">{ui.emailLabel}</span>
+              <a href={`mailto:${settings.email}`}>{settings.email}</a>
             </div>
             <div className="contact-detail">
-              <span className="contact-detail-label">Phone</span>
-              <a href="tel:+918925425514">{profile.phone}</a>
+              <span className="contact-detail-label">{ui.phoneLabel}</span>
+              <a href={`tel:${settings.phone.replace(/[^\d+]/g, "")}`}>{settings.phone}</a>
             </div>
             <div className="contact-detail">
-              <span className="contact-detail-label">Based in</span>
-              <span>{profile.location}</span>
+              <span className="contact-detail-label">{ui.locationLabel}</span>
+              <span>{settings.location}</span>
             </div>
           </aside>
-          <ContactForm />
+          <ContactForm content={content} email={settings.email} />
         </div>
       </div>
     </section>

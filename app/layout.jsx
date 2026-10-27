@@ -2,9 +2,8 @@ import "./globals.css";
 import ScrollReveal from "./components/ScrollReveal";
 
 export const metadata = {
-  title: "Hariprasath V — Full-stack developer",
-  description:
-    "Portfolio of Hariprasath V, a full-stack developer building thoughtful digital products and dependable web applications.",
+  title: "Portfolio",
+  description: "Personal portfolio.",
   icons: {
     icon: "/icon.svg",
   },

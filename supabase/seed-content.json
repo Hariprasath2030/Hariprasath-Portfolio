@@ -1,0 +1,258 @@
+{
+  "_assetFiles": {
+    "settings.portraitUrl": "src/assets/port.jpg",
+    "projects.items.0.imageUrl": "src/assets/medivox.png",
+    "projects.items.1.imageUrl": "src/assets/smart-retail.png",
+    "projects.items.2.imageUrl": "src/assets/budgetbloom.png",
+    "projects.items.3.imageUrl": "src/assets/carrent.png",
+    "projects.items.4.imageUrl": "src/assets/jobit.png",
+    "projects.items.5.imageUrl": "src/assets/fest-book.png",
+    "projects.items.6.imageUrl": "src/assets/healthcare.png"
+  },
+  "settings": {
+    "name": "Hariprasath V",
+    "role": "Full-stack developer",
+    "email": "officialhari2030@gmail.com",
+    "phone": "+91 8925425514",
+    "location": "Tirupattur, Tamil Nadu, India",
+    "resumeUrl": "/HARIPRASATH_R.pdf",
+    "portraitUrl": "",
+    "portraitAlt": "Portrait of Hariprasath V",
+    "logoMark": "H V",
+    "metaTitle": "Hariprasath V — Full-stack developer",
+    "metaDescription": "Portfolio of Hariprasath V, a full-stack developer building thoughtful digital products and dependable web applications."
+  },
+  "navigation": [
+    { "id": "about", "label": "About" },
+    { "id": "experience", "label": "Experience" },
+    { "id": "certifications", "label": "Certifications" },
+    { "id": "skills", "label": "Skills" },
+    { "id": "projects", "label": "Projects" },
+    { "id": "contact", "label": "Contact" }
+  ],
+  "ui": {
+    "resumeLabel": "Resume",
+    "adminLabel": "Admin",
+    "viewResumeLabel": "View resume",
+    "githubProfileLabel": "GitHub profile",
+    "projectIndexLabel": "PROJECT",
+    "liveProjectLabel": "Live project",
+    "sourceCodeLabel": "Source code",
+    "certificateLabel": "Certificate",
+    "viewCertificateLabel": "View certificate",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Based in",
+    "portfolioYearLabel": "Portfolio"
+  },
+  "hero": {
+    "overline": "Full-stack developer · India",
+    "title": "Building the web,",
+    "accentTitle": "with purpose.",
+    "description": "I’m Hariprasath V, a full-stack developer shaping thoughtful digital products with considered interfaces and dependable engineering.",
+    "chips": ["React", "Next.js", "Node.js", "Spring Boot", "Three.js"],
+    "primaryLabel": "Explore selected work",
+    "primaryHref": "#projects",
+    "secondaryLabel": "Get in touch",
+    "secondaryHref": "#contact",
+    "scrollLabel": "Scroll to explore"
+  },
+  "about": {
+    "index": "01",
+    "eyebrow": "A little about me",
+    "title": "I like making complex things feel clear.",
+    "paragraphs": [
+      "I’m a passionate Full Stack Developer, currently working as an intern at Sekel Tech in Pune. I build responsive web experiences with React.js, Next.js, Three.js, and Framer Motion.",
+      "My work spans the MERN stack and Spring Boot, with a focus on scalable applications that feel considered and work well across devices.",
+      "From interactive interfaces to backend services, I enjoy turning ideas into digital products that are both visually precise and useful."
+    ],
+    "stats": [
+      { "value": "10+", "label": "Projects completed" },
+      { "value": "1", "label": "Year of experience" },
+      { "value": "10+", "label": "Technologies" }
+    ],
+    "links": [
+      { "label": "View resume", "href": "/HARIPRASATH_R.pdf" },
+      { "label": "GitHub profile", "href": "https://github.com/Hariprasath2030" }
+    ]
+  },
+  "experience": {
+    "index": "02",
+    "eyebrow": "Where I’ve worked",
+    "title": "Experience",
+    "description": "A couple of roles where I’ve built, learned, and contributed alongside teams.",
+    "items": [
+      {
+        "role": "Frontend Developer Intern",
+        "company": "Sekel Tech",
+        "date": "June 2025 – Present",
+        "points": [
+          "Working as a Frontend Developer in a hyperlocal omni-channel platform using Next.js and API integration.",
+          "Building responsive, scalable UIs with smooth animations and enhanced user experiences.",
+          "Collaborating with cross-functional teams to deliver fast, interactive, and modern web solutions."
+        ]
+      },
+      {
+        "role": "Web Developer & Backend Developer",
+        "company": "Cognifyz Technologies",
+        "date": "April 2024 – June 2024",
+        "points": [
+          "Worked on dynamic website development using HTML, CSS, JavaScript, and PHP.",
+          "Developed backend services and RESTful APIs using PHP and XAMPP for smooth frontend integration.",
+          "Focused on responsive design, performance optimization, and application security across devices.",
+          "Performed unit testing, debugging, and code reviews to maintain high-quality code standards."
+        ]
+      }
+    ]
+  },
+  "certifications": {
+    "index": "03",
+    "eyebrow": "Learning, in practice",
+    "title": "Certifications & training",
+    "description": "Professional development through industry-recognized certifications and focused training.",
+    "items": [
+      {
+        "title": "Getting Started with Spring Boot 2.0",
+        "issuer": "Infosys Springboard",
+        "date": "October 2024 – December 2024",
+        "description": "Comprehensive certification covering enterprise-level Spring Boot application development, RESTful API design, Spring Security implementation, and microservices architecture.",
+        "fileUrl": "/certificates/Spring.pdf"
+      },
+      {
+        "title": "Advanced MERN Stack Development",
+        "issuer": "Infosys Springboard",
+        "date": "September 2024 – October 2024",
+        "description": "Full-stack web development certification focusing on MongoDB, Express.js, React.js, and Node.js ecosystem with modern development practices and deployment strategies.",
+        "fileUrl": "/certificates/Mern.pdf"
+      },
+      {
+        "title": "Full Stack Web Development",
+        "issuer": "Cognifyz Technologies",
+        "date": "April 2024 – June 2024",
+        "description": "Comprehensive web development certification covering both frontend and backend technologies with hands-on project experience and industry best practices.",
+        "fileUrl": "/certificates/Cognify.pdf"
+      },
+      {
+        "title": "Introduction to DevOps",
+        "issuer": "Great Learning Academy",
+        "date": "November 2024",
+        "description": "Completed an introductory course on DevOps covering core concepts, tools, and practices essential for continuous integration, deployment, and automation in modern software development.",
+        "fileUrl": "/certificates/Devops.pdf"
+      }
+    ]
+  },
+  "skills": {
+    "index": "04",
+    "eyebrow": "Tools of the trade",
+    "title": "Skills & technologies",
+    "description": "A growing toolkit across frontend, backend, and interactive web development.",
+    "label": "Technologies",
+    "note": "Constantly learning and adapting to new technologies to build useful solutions. Each skill represents time spent learning, building, and refining.",
+    "items": [
+      { "name": "HTML 5" },
+      { "name": "CSS 3" },
+      { "name": "JavaScript" },
+      { "name": "React JS" },
+      { "name": "Tailwind CSS" },
+      { "name": "Node JS" },
+      { "name": "MongoDB" },
+      { "name": "Three JS" },
+      { "name": "Spring Boot" },
+      { "name": "Angular JS" },
+      { "name": "PHP" },
+      { "name": "Bootstrap" },
+      { "name": "Java" }
+    ]
+  },
+  "projects": {
+    "index": "05",
+    "eyebrow": "Selected work",
+    "title": "Projects, made real.",
+    "description": "A selection of work across product interfaces, full-stack applications, and exploratory ideas. Each project links to its code and live version where available.",
+    "items": [
+      {
+        "name": "Medi-Vox – AI Medical Voice Assistant",
+        "description": "A real-time AI medical voice agent that lets users speak naturally about health symptoms and receive instant, intelligent, context-aware medical guidance. Powered by AssemblyAI for STT/TTS, secured with Clerk authentication, and backed by Neon PostgreSQL with encrypted medical records.",
+        "tags": ["Next.js", "React", "TypeScript", "AssemblyAI", "Clerk"],
+        "imageUrl": "",
+        "source": "https://github.com/Hariprasath2030/Medi-Vox",
+        "demo": "https://medi-vox.vercel.app/"
+      },
+      {
+        "name": "Smart Retail Hub",
+        "description": "An integrated system designed to optimize inventory management through automation and real-time monitoring. It combines automated checkout, sales tracking, and customer engagement for product tracking, predictive analytics, supply chain visibility, and better decision-making.",
+        "tags": ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
+        "imageUrl": "",
+        "source": "https://github.com/Hariprasath2030/Retail-Hub-client",
+        "demo": "https://retail-hub-client.vercel.app/"
+      },
+      {
+        "name": "Budget Bloom",
+        "description": "A full-stack app for managing finances by tracking income and expenses and analyzing spending with visual charts. It includes authentication, filters, financial insights, expense categorization, savings optimization, monthly reports, goal tracking, cash-flow analysis, and secure data storage.",
+        "tags": ["Next.js", "Tailwind CSS", "Drizzle ORM", "Express.js", "Neon", "Clerk"],
+        "imageUrl": "",
+        "source": "https://github.com/Hariprasath2030/Budget-Bloom",
+        "demo": "https://budget-bloom.vercel.app/"
+      },
+      {
+        "name": "Restaurant management system",
+        "description": "A web-based management system designed to improve communication between clients and restaurant owners, including table reservations for dining.",
+        "tags": ["HTML", "CSS", "JavaScript"],
+        "imageUrl": "",
+        "source": "https://github.com/Hariprasath2030/Restaurant-management-system",
+        "demo": "https://restaurant-management-system-vjyw.vercel.app/"
+      },
+      {
+        "name": "GRADE CRAFT",
+        "description": "A platform for educators and administrative staff addressing incident analysis and proactive safety management in educational institutions, with an emphasis on the complexities of aviation safety.",
+        "tags": ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
+        "imageUrl": "",
+        "source": "https://github.com/Hariprasath2030/Student-performance-system",
+        "demo": ""
+      },
+      {
+        "name": "Fest-Book",
+        "description": "An event management platform that connects organizers and customers, enabling event creation, promotion, and booking through a dynamic interface for interaction and communication.",
+        "tags": ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Clerk"],
+        "imageUrl": "",
+        "source": "https://github.com/Hariprasath2030/Fest-Event-App-Frontend",
+        "demo": "https://fest-book.vercel.app/"
+      },
+      {
+        "name": "AI-Smart HealthCare",
+        "description": "A virtual doctor platform using AI to provide accessible healthcare remotely, especially in underserved areas. Built with React.js, Tailwind CSS, Clerk, and MongoDB to help bridge gaps in healthcare access.",
+        "tags": ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
+        "imageUrl": "",
+        "source": "https://github.com/Hariprasath2030/Heal_Smart_System",
+        "demo": "https://heal-smart-system.vercel.app/"
+      }
+    ]
+  },
+  "contact": {
+    "index": "06",
+    "eyebrow": "Start a conversation",
+    "title": "Have a good problem to solve?",
+    "description": "For a project, collaboration, or just to say hello, I’d be glad to hear from you.",
+    "asideText": "Reach out directly or leave a note. I’m always interested in thoughtful work and good conversations.",
+    "formNoticeTitle": "Email delivery is not configured on this site.",
+    "formNoticeBody": "Use the form to prepare a draft in your email app, or email",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Name",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "What would you like to discuss?",
+    "messagePlaceholder": "A few details about your project or idea...",
+    "submitLabel": "Prepare email"
+  },
+  "socialLinks": [
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/hariprasath-v-ab5006276" },
+    { "label": "GitHub", "href": "https://github.com/Hariprasath2030" },
+    { "label": "Instagram", "href": "https://www.instagram.com/hearty_soul_016" },
+    { "label": "X", "href": "https://x.com/Hariprasat67463" },
+    { "label": "LeetCode", "href": "https://leetcode.com/u/hariprasath2030/" }
+  ],
+  "footer": {
+    "note": "Full-stack developer · Tirupattur, India",
+    "copyrightSuffix": "All rights reserved."
+  }
+}

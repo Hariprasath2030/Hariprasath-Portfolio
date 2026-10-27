@@ -1,13 +1,12 @@
 import SectionHeading from "../SectionHeading";
-import { experience } from "../../data/portfolio";
 
-export default function Experience() {
+export default function Experience({ content }) {
   return (
     <section className="section" id="experience">
       <div className="container">
-        <SectionHeading index="02" eyebrow="Where I’ve worked" title="Experience" description="A couple of roles where I’ve built, learned, and contributed alongside teams." />
+        <SectionHeading index={content.index} eyebrow={content.eyebrow} title={content.title} description={content.description} />
         <div className="timeline">
-          {experience.map((item, index) => (
+          {content.items.map((item, index) => (
             <article className={`experience-item reveal${index ? " delay-1" : ""}`} key={`${item.company}-${item.role}`}>
               <p className="experience-date">{item.date}</p>
               <div>

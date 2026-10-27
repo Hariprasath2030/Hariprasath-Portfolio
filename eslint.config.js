@@ -8,7 +8,7 @@ import nextPlugin from '@next/eslint-plugin-next'
 export default [
   { ignores: ['dist'] },
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,mjs}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -34,6 +34,12 @@ export default [
       'react/prop-types': 'off',
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': 'off',
+    },
+  },
+  {
+    files: ['app/api/**/*.js', 'lib/**/*.js', 'middleware.js', 'scripts/**/*.mjs'],
+    languageOptions: {
+      globals: globals.node,
     },
   },
 ]

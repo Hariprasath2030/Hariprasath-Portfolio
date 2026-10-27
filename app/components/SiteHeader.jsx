@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { navLinks } from "../data/portfolio";
+import { LockKeyhole } from "lucide-react";
+import Link from "next/link";
 
-export default function SiteHeader() {
+export default function SiteHeader({ navLinks, settings, ui }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
@@ -22,7 +23,7 @@ export default function SiteHeader() {
     );
     targets.forEach((target) => observer.observe(target));
     return () => observer.disconnect();
-  }, []);
+  }, [navLinks]);
 
   useEffect(() => {
     if (!menuOpen) return undefined;
@@ -42,10 +43,10 @@ export default function SiteHeader() {
           className="wordmark"
           href="#home"
           onClick={closeMenu}
-          aria-label="Hariprasath V, home"
+          aria-label={`${settings.name}, home`}
         >
-          <span className="wordmark-mark">H V</span>
-          <span className="wordmark-name">Hariprasath V</span>
+          <span className="wordmark-mark">{settings.logoMark}</span>
+          <span className="wordmark-name">{settings.name}</span>
         </a>
 
         <nav
@@ -64,21 +65,25 @@ export default function SiteHeader() {
           ))}
           <a
             className="nav-mobile-resume"
-            href="/HARIPRASATH_R.pdf"
+            href={settings.resumeUrl}
             target="_blank"
             rel="noreferrer"
           >
-            Resume <span aria-hidden="true">↗</span>
+            {ui.resumeLabel} <span aria-hidden="true">↗</span>
           </a>
         </nav>
 
+        <Link className="header-admin" href="/admin" aria-label="Admin dashboard">
+          <LockKeyhole size={14} aria-hidden="true" />
+          <span>{ui.adminLabel}</span>
+        </Link>
         <a
           className="header-resume"
-          href="/HARIPRASATH_R.pdf"
+          href={settings.resumeUrl}
           target="_blank"
           rel="noreferrer"
         >
-          Resume <span aria-hidden="true">↗</span>
+          {ui.resumeLabel} <span aria-hidden="true">↗</span>
         </a>
         <button
           className={`menu-toggle${menuOpen ? " menu-toggle-open" : ""}`}
@@ -116,13 +121,21 @@ export default function SiteHeader() {
           </a>
         ))}
         <a
+          className="mobile-resume-link mobile-admin-link"
+          href="/admin"
+          tabIndex={menuOpen ? 0 : -1}
+        >
+          <LockKeyhole size={15} aria-hidden="true" />
+          {ui.adminLabel}
+        </a>
+        <a
           className="mobile-resume-link"
-          href="/HARIPRASATH_R.pdf"
+          href={settings.resumeUrl}
           target="_blank"
           rel="noreferrer"
           tabIndex={menuOpen ? 0 : -1}
         >
-          View resume <span aria-hidden="true">↗</span>
+          {ui.viewResumeLabel} <span aria-hidden="true">↗</span>
         </a>
       </nav>
     </header>

@@ -1,45 +1,34 @@
 import HexagonField from "./HexagonField";
 
-export default function Hero() {
+export default function Hero({ content, ui }) {
   return (
     <section className="hero" id="home" aria-labelledby="hero-title">
       <HexagonField />
       <div className="hero-content">
         <p className="hero-overline">
-          <span className="availability-mark" /> Full-stack developer · India
+          <span className="availability-mark" /> {content.overline}
         </p>
         <h1 className="hero-title" id="hero-title">
-          Building the web,
-          <span>with purpose.</span>
+          {content.title}
+          <span>{content.accentTitle}</span>
         </h1>
-        <p className="hero-description">
-          I’m Hariprasath V, a full-stack developer shaping thoughtful digital
-          products with considered interfaces and dependable engineering.
-        </p>
+        <p className="hero-description">{content.description}</p>
         <div className="hero-chips" aria-label="Core technologies">
-          {["React", "Next.js", "Node.js", "Spring Boot", "Three.js"].map(
-            (item) => (
-              <span className="chip" key={item}>
-                {item}
-              </span>
-            ),
-          )}
+          {content.chips.map((item) => <span className="chip" key={item}>{item}</span>)}
         </div>
         <div className="hero-actions">
-          <a className="button button-primary" href="#projects">
-            Explore selected work{" "}
+          <a className="button button-primary" href={content.primaryHref}>
+            {content.primaryLabel}{" "}
             <span className="arrow" aria-hidden="true">
               ↗
             </span>
           </a>
-          <a className="button button-secondary" href="#contact">
-            Get in touch
-          </a>
+          <a className="button button-secondary" href={content.secondaryHref}>{content.secondaryLabel}</a>
         </div>
       </div>
-      <div className="hero-foot" aria-hidden="true">
-        <span className="scroll-cue">Scroll to explore</span>
-        <span>Portfolio · {new Date().getFullYear()}</span>
+      <div className="hero-foot">
+        <span className="scroll-cue">{content.scrollLabel}</span>
+        <span>{ui.portfolioYearLabel} · {new Date().getFullYear()}</span>
       </div>
     </section>
   );

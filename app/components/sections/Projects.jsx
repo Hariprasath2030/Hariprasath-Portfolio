@@ -1,45 +1,48 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import SectionHeading from "../SectionHeading";
-import { projects } from "../../data/portfolio";
+import BrandIcon from "../BrandIcon";
 
-export default function Projects() {
+export default function Projects({ content, ui }) {
   return (
     <section className="section" id="projects">
       <div className="container">
         <SectionHeading
-          index="05"
-          eyebrow="Selected work"
-          title="Projects, made real."
-          description="A selection of work across product interfaces, full-stack applications, and exploratory ideas. Each project links to its code and live version where available."
+          index={content.index}
+          eyebrow={content.eyebrow}
+          title={content.title}
+          description={content.description}
         />
         <div className="project-list">
-          {projects.map((project, index) => (
+          {content.items.map((project, index) => (
             <article className={`project-card reveal${index % 2 ? " delay-1" : ""}`} key={project.name}>
               <div className="project-visual">
-                <Image
-                  className="project-image"
-                  src={project.image}
-                  alt={`${project.name} interface preview`}
-                  fill
-                  sizes="(max-width: 800px) 100vw, 45vw"
-                />
+                {project.imageUrl ? (
+                  <img className="project-image" src={project.imageUrl} alt={`${project.name} interface preview`} loading="lazy" decoding="async" />
+                ) : <span className="project-image-placeholder">{project.name}</span>}
               </div>
               <div className="project-detail">
-                <span className="project-index">PROJECT 0{index + 1}</span>
+                <span className="project-index">{ui.projectIndexLabel} 0{index + 1}</span>
                 <h3 className="project-title">{project.name}</h3>
                 <p className="project-description">{project.description}</p>
                 <div className="project-tags" aria-label={`${project.name} technologies`}>
-                  {project.tags.map((tag) => <span className="project-tag" key={tag}>{tag}</span>)}
+                  {project.tags.map((tag) => (
+                    <span className="project-tag" key={tag}>
+                      <BrandIcon name={tag} className="project-tag-icon" />
+                      {tag}
+                    </span>
+                  ))}
                 </div>
                 <div className="project-links">
                   {project.demo ? (
                     <a className="text-link" href={project.demo} target="_blank" rel="noreferrer">
-                      Live project <span className="arrow" aria-hidden="true">↗</span>
+                      {ui.liveProjectLabel} <span className="arrow" aria-hidden="true">↗</span>
                     </a>
                   ) : null}
-                  <a className="text-link" href={project.source} target="_blank" rel="noreferrer">
-                    Source code <span className="arrow" aria-hidden="true">↗</span>
-                  </a>
+                  {project.source ? (
+                    <a className="text-link" href={project.source} target="_blank" rel="noreferrer">
+                      {ui.sourceCodeLabel} <span className="arrow" aria-hidden="true">↗</span>
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </article>

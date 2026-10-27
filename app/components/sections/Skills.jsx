@@ -1,25 +1,28 @@
 import SectionHeading from "../SectionHeading";
-import { technologies } from "../../data/portfolio";
+import BrandIcon from "../BrandIcon";
 
-export default function Skills() {
+export default function Skills({ content }) {
   return (
     <section className="section" id="skills">
       <div className="container">
         <SectionHeading
-          index="04"
-          eyebrow="Tools of the trade"
-          title="Skills & technologies"
-          description="A growing toolkit across frontend, backend, and interactive web development."
+          index={content.index}
+          eyebrow={content.eyebrow}
+          title={content.title}
+          description={content.description}
         />
         <div className="skills-board reveal delay-1">
-          <p className="skills-label">Technologies</p>
+          <p className="skills-label">{content.label}</p>
           <div className="skills-content">
-            {technologies.map((technology) => <span className="skill-item" key={technology}>{technology}</span>)}
+            {content.items.map((technology) => (
+              <span className="skill-item" key={technology.name}>
+                <BrandIcon name={technology.name} className="skill-icon" />
+                {technology.name}
+              </span>
+            ))}
           </div>
         </div>
-        <p className="skills-note reveal delay-2">
-          Constantly learning and adapting to new technologies to build useful solutions. Each skill represents time spent learning, building, and refining.
-        </p>
+        <p className="skills-note reveal delay-2">{content.note}</p>
       </div>
     </section>
   );
