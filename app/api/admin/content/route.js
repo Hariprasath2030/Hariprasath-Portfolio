@@ -16,6 +16,27 @@ async function authorize() {
   return { response: null };
 }
 
+function contentDatabaseError(operation, error) {
+  console.error(`Could not ${operation} portfolio content.`, {
+    code: error.code,
+    message: error.message,
+    details: error.details,
+    hint: error.hint,
+  });
+
+  if (error.code === "42P01" || error.code === "PGRST205") {
+    return NextResponse.json(
+      { error: "The portfolio_content table is missing. Apply supabase/schema.sql in the Supabase SQL Editor." },
+      { status: 503 },
+    );
+  }
+
+  return NextResponse.json(
+    { error: `Could not ${operation} portfolio content.` },
+    { status: 500 },
+  );
+}
+
 export async function GET() {
   const { response } = await authorize();
   if (response) return response;
@@ -28,7 +49,7 @@ export async function GET() {
     .maybeSingle();
 
   if (error) {
-    return NextResponse.json({ error: "Could not read portfolio content." }, { status: 500 });
+    return contentDatabaseError("read", error);
   }
   if (!data) {
     return NextResponse.json(
@@ -79,7 +100,7 @@ export async function PUT(request) {
   );
 
   if (error) {
-    return NextResponse.json({ error: "Could not save portfolio content." }, { status: 500 });
+    return contentDatabaseError("save", error);
   }
 
   return NextResponse.json({ success: true, savedAt: new Date().toISOString() });

@@ -1,11 +1,12 @@
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
-import { loadEnvConfig } from "@next/env";
+import nextEnv from "@next/env";
 import { createClient } from "@supabase/supabase-js";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const { loadEnvConfig } = nextEnv;
 loadEnvConfig(projectRoot);
 
 const requiredEnv = [

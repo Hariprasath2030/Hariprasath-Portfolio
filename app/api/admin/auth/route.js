@@ -71,8 +71,27 @@ export async function POST(request) {
     }
 
     const serviceClient = createServiceClient();
-    const { data: existing, error: lookupError } =
-      await serviceClient.auth.admin.getUserByEmail(email);
+    let existingUser = null;
+    let lookupError = null;
+    let page = 1;
+
+    do {
+      const { data, error } = await serviceClient.auth.admin.listUsers({
+        page,
+        perPage: 1000,
+      });
+
+      if (error) {
+        lookupError = error;
+        break;
+      }
+
+      existingUser =
+        data.users.find(
+          (user) => user.email?.toLowerCase() === email.toLowerCase(),
+        ) ?? null;
+      page = data.nextPage;
+    } while (!existingUser && page !== null);
 
     if (lookupError) {
       return NextResponse.json(
@@ -80,7 +99,7 @@ export async function POST(request) {
         { status: 502 },
       );
     }
-    if (existing?.user) {
+    if (existingUser) {
       return NextResponse.json(
         { error: "The owner account already exists. Sign in instead." },
         { status: 409 },
